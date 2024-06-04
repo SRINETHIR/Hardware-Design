@@ -41,9 +41,22 @@ Qrouter
 ![qrouter](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/11a76ab0-a68e-49a5-9ca5-1e011171ad30)
 
 Graywolf
+
+![Grawolf](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/e4a681e0-64b0-43c6-af80-7f80d67c70e2)
+
 Magic
+
+![magic](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/f29bb38b-4550-4592-b132-d79221f16017)
+
 Qflow
+
+![qflow](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/1d624baa-7772-4efd-a3a0-ed7973b50f9e)
+
 Netgen
+
+![netgen](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5b6fe88f-7bb9-4da0-89a5-8c601411551f)
+
+
 
 
 
