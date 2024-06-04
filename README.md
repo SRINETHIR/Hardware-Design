@@ -36,4 +36,11 @@ Installation in CENTOS
 6) ./vsdflow spi_slave_design_details.csv
 7) ./vsdflow picorv32_design_details.csv
 
+Qrouter
+Graywolf
+Magic
+Qflow
+Netgen
+
+
 
