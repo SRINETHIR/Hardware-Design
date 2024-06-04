@@ -2,13 +2,13 @@
 
 Installation in UBUNTU
 
-sudo apt-get install git
-git clone https://github.com/kunalg123/vsdflow.git
-cd vsdflow
-chmod 777 opensource_eda_tool_install.sh
-./opensource_eda_tool_install.sh 
-./vsdflow spi_slave_design_details.csv
-./vsdflow picorv32_design_details.csv
+1) sudo apt-get install git
+2) git clone https://github.com/kunalg123/vsdflow.git
+3) cd vsdflow
+4) chmod 777 opensource_eda_tool_install.sh
+5) ./opensource_eda_tool_install.sh 
+6) ./vsdflow spi_slave_design_details.csv
+7) ./vsdflow picorv32_design_details.csv
 
 
 Yosys
@@ -28,12 +28,12 @@ iverilog
 
 Installation in CENTOS
 
-sudo yum install git
-git clone https://github.com/kunalg123/vsdflow.git
-cd vsdflow
-chmod 777 opensource_eda_tool_install_centos.sh
-sudo ./opensource_eda_tool_install_centos.sh 
-./vsdflow spi_slave_design_details.csv
-./vsdflow picorv32_design_details.csv
+1) sudo yum install git
+2) git clone https://github.com/kunalg123/vsdflow.git
+3) cd vsdflow
+4) chmod 777 opensource_eda_tool_install_centos.sh
+5) sudo ./opensource_eda_tool_install_centos.sh 
+6) ./vsdflow spi_slave_design_details.csv
+7) ./vsdflow picorv32_design_details.csv
 
 
