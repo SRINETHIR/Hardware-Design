@@ -11,5 +11,4 @@ GTKWave
 
 iverilog
 
-
-
+![iverilog](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5835b475-6784-426a-aefa-0f1f47c2b5b8)
