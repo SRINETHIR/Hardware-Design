@@ -37,6 +37,9 @@ Installation in CENTOS
 7) ./vsdflow picorv32_design_details.csv
 
 Qrouter
+
+![qrouter](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/11a76ab0-a68e-49a5-9ca5-1e011171ad30)
+
 Graywolf
 Magic
 Qflow
