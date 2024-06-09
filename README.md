@@ -1,5 +1,9 @@
 # Hardware-Design
 
+The progress made in the VSD-HDP course:
+
+<h2 id = 'Week0'>Week0</h2>
+
 Installation in UBUNTU
 
 1) sudo apt-get install git
