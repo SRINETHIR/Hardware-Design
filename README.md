@@ -36,6 +36,7 @@ sudo make install
 
 
 <h3>GTKWave</h3>
+
 ```
 sudo apt-get update
 sudo apt install gtkwave
@@ -45,6 +46,7 @@ sudo apt install gtkwave
 
 
 <h3>iverilog</h3>
+
 ```
 sudo apt-get update
 sudo apt-get install iverilog
