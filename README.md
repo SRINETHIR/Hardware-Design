@@ -13,7 +13,7 @@ Installation in UBUNTU
 <ol>
      <li>OS: Ubuntu 22.04<br></li>
      <li>RAM: 8 GB<br></li>
-     <li>Storage: 8 GB<br></li>
+     <li>Storage: 40 GB<br></li>
 </ol>
 
 <h3>Yosys</h3>
