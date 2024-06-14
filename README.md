@@ -56,3 +56,21 @@ sudo apt-get install iverilog
 
 
 </details>
+<details>
+<summary>
+<h2 id = 'Week1'>Week1</h2>
+</summary>
+<h3>Day 1</h3>
+Stimulation of a MUX using iverilog and synthesis of the MUX is done using Yosys. The simulation results of the MUX is plotted with a tool called gtkwave. Gtkwave tools use the vcd (value changing dump) file to get the simulation results.
+
+<h4>iverilog</h4>
+
+```
+iverilog  good_mux.v  tb_good_mux.v
+./a.out
+gtkwave tb_good_mux.vcd
+```
+
+
+</details>
+
