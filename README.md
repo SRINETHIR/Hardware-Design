@@ -74,8 +74,9 @@ gtkwave tb_good_mux.vcd
 
 ![1_good_mux_iverilog](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/72636cbd-8991-42b1-a415-6faf9854598e)
 
-
 <h4>gtkwave</h4>
+
+![2_good_mux_gtkwave](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/256eb1a8-8b87-4e63-9669-5dd08749d3e9)
 
 </details>
 
