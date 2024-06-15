@@ -117,16 +117,19 @@ write_verilog -noattr <name of the netlist to be generated.v>
 
 ____
 
-Synthesis of multimodule file – with 2 submodules.
+Synthesis of multimodule file – with 2 submodules.<br>
 Synthesis is important at the submodule level for 2 major reasons:
 <ol>
-          <li>OS: reason 1<br></li>
-          <li>RAM: reason 2<br></li>
+          <li>reason 1<br></li>
+          <li>reason 2<br></li>
  </ol>
 
-Hierarchical design – the design is constituted of submodules and the hierarchy are preserved
+Hierarchical design – the design is constituted of submodules and the hierarchy is preserved
 
-Synthesis of Multiple Modules
+<details>
+     <summary>
+          <h4 id = 'Synthesis of Multiple Modules'> Synthesis of Multiple Modules <h4>
+     </summary>
 
 ```
 read_liberty -lib <path to the .lib file>
@@ -136,9 +139,11 @@ abc -liberty <path to the .lib file>
 show <name given>
 ```
 
+Hierarchical design generated 
+
 ![5_multimodule synth](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/4af7455b-d730-44f8-bc94-60155dc21db0)
 
-Netlist generated of the hierarchical design
+Netlist generated for the hierarchical design
 
 ```
 write_verilog -noattr <name given>
@@ -146,7 +151,12 @@ write_verilog -noattr <name given>
 ```
 ![6_multimodule netlist](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/9c23125b-a53e-4afa-8211-5e877a468f8c)
 
-Synthesizing flattened multiple module
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Synthesizing flattened multiple module'> Synthesizing flattened multiple module <h4>
+     </summary>
 
 Flattened design generation
 
@@ -165,6 +175,8 @@ write_verilog -noattr <given name: multiple_modules_flat.v>
 ```
 
 ![7_multimoduled_flatten_netlist](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/b708604b-18b3-4569-8941-2ba31cbfcae5)
+
+</details>
 
 </details>
 
