@@ -178,5 +178,22 @@ write_verilog -noattr <given name: multiple_modules_flat.v>
 
 </details>
 
+<details>
+     <summary>
+          <h4 id = 'Sub module level synthesis'> Sub module level synthesis <h4>
+     </summary>
+
+```
+read_liberty -lib <path to .lib file>
+read_verilog <name of the verilog file>
+synth -top sub_module1
+abc -liberty  <path to .lib file>
+show
+```
+
+![8_submodule1_design](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/a7b831aa-d032-4104-b5b8-19bd874fbb09)
+
+
+</details>
 </details>
 
