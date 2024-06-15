@@ -117,7 +117,7 @@ write_verilog -noattr <name of the netlist to be generated.v>
 
 ____
 
-Synthesis of multimodule file – with 2 submodules.<br>
+Synthesis of multimodule file – with 2 submodules.<be><br>
 Synthesis is important at the submodule level for 2 major reasons:
 <ol>
           <li>When there is a presence of multiple instantiations of same component, then the module is synthesised single time and replicated multiple times in the top and need not be synthesized multiple times. Hence, this helps to save time.<br></li>
