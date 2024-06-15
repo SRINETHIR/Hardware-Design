@@ -60,8 +60,13 @@ sudo apt-get install iverilog
 <summary>
 <h2 id = 'Week1'>Week1</h2>
 </summary>
-<h3>Day 1</h3>
-Stimulation of a MUX using iverilog and synthesis of the MUX is done using Yosys. The simulation results of the MUX is plotted with a tool called gtkwave. Gtkwave tools use the vcd (value changing dump) file to get the simulation results.
+
+     
+<details>
+     <summary>
+<h3 id = 'Day1'>Day1</h3>
+     </summary>
+     Stimulation of a MUX using iverilog and synthesis of the MUX is done using Yosys. The simulation results of the MUX is plotted with a tool called gtkwave. Gtkwave tools use the vcd (value changing dump) file to get the simulation results.
 
 Simulation of RTL Designs
 ```
@@ -100,6 +105,6 @@ write_verilog -noattr <name of the netlist to be generated.v>
 ```
 
 ![4_netlist good mux](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/7e9bb20d-2b28-4fbd-9b08-d78a98e7c58f)
-
+</details>
 </details>
 
