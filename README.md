@@ -64,19 +64,19 @@ Successful installation of iverilog:
      
 ____
 
-Stimulation of a MUX using iverilog and synthesis of the MUX is done using Yosys. The simulation results of the MUX is plotted with a tool called gtkwave. Gtkwave tools use the vcd (value changing dump) file to get the simulation results.
+Stimulation of a 2x1 MUX using iverilog and synthesis of the MUX is done using Yosys. The simulation results of the MUX is plotted with a tool called gtkwave. Gtkwave tools use the vcd (value changing dump) file to get the simulation results.
 <details>
      <summary>
           <h4 id = 'Simulation'>Simulation</h4>
      </summary>
      
-Simulation of RTL Design
+Commands to simulate the RTL Design and plot it
      
      
 ```
-iverilog  good_mux.v  tb_good_mux.v
+iverilog  <name of verilog file: good_mux.v> <Name of the test bench: tb_good_mux.v>
 ./a.out
-gtkwave tb_good_mux.vcd
+gtkwave <Nmae of vcd file: tb_good_mux.vcd>
 ```
 
 <h4>iverilog</h4>
@@ -95,7 +95,8 @@ gtkwave tb_good_mux.vcd
      </summary>
 
 <h4>Synthesis using Yosys</h4>
-Yosys is a synthesizer used to convert the RTL Design to a netlist.
+Yosys is a synthesizer used to convert the RTL Design to a netlist.<br>
+Commands to synthesize and generate the netlist.
 
 ```
 read_liberty -lib <path to .lib file>
