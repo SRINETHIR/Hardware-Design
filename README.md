@@ -12,6 +12,7 @@ The progress made in the VSD-Hardware Development Program :
           <li>Storage: 40 GB<br></li>
      </ol>
      <h3>Yosys</h3>
+     Commands to install Yosys are as follows:
      
      ```
      sudo apt-get update
@@ -26,26 +27,31 @@ The progress made in the VSD-Hardware Development Program :
      make 
      sudo make install
      ```
-     
+
+Successful installation of Yosys:
 ![yosys](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/e9448497-7562-479f-b50e-dd6982d35ef0) 
 
 <h3>GTKWave</h3>
+Commands to install GTKWave are as follows:
 
 ```
 sudo apt-get update
 sudo apt install gtkwave
 ```
 
+Successful installation of Gtkwave:
 ![GTKwave](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/8808c5c5-11b5-448b-956a-29be9d0e0950)
 
 
 <h3>iverilog</h3>
+Commands to install iverilog are as follows:
 
 ```
 sudo apt-get update
 sudo apt-get install iverilog
 ```
 
+Successful installation of iverilog:
 ![iverilog](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5835b475-6784-426a-aefa-0f1f47c2b5b8)
 
 </details>
