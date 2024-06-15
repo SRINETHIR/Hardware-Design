@@ -78,5 +78,28 @@ gtkwave tb_good_mux.vcd
 
 ![2_good_mux_gtkwave](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/256eb1a8-8b87-4e63-9669-5dd08749d3e9)
 
+<h4>Synthesis using Yosys</h4>
+Yosys is a synthesizer used to convert the RTL Design to ma netlist.
+
+```
+read_liberty -lib <path to .lib file>
+read_verilog <Verilog file name>
+synth -top <module name that has to be synthesised>
+abc -liberty <path to .lib file>
+```
+
+Synthesized design of the good mux
+
+![3_logic design good mux](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/4c5bb1c7-cd8f-44f0-a31a-32185190d91c)
+
+Generating the netlist of good mux
+
+```
+write_verilog <name of the netlist to be generated.v>
+write_verilog -noattr <name of the netlist to be generated.v>
+```
+
+![4_netlist good mux](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/7e9bb20d-2b28-4fbd-9b08-d78a98e7c58f)
+
 </details>
 
