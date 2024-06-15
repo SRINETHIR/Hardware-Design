@@ -109,7 +109,7 @@ Synthesized design of the good mux
 
 ![3_logic design good mux](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/4c5bb1c7-cd8f-44f0-a31a-32185190d91c)
 
-Generating the netlist of good mux
+Commands to generate the netlist of good mux
 
 ```
 write_verilog <name of the netlist to be generated.v>
@@ -127,8 +127,8 @@ ____
 Synthesis of multimodule file – with 2 submodules.<be><br>
 Synthesis is important at the submodule level for 2 major reasons:
 <ol>
-          <li>When there is a presence of multiple instantiations of same component, then the module is synthesised single time and replicated multiple times in the top and need not be synthesized multiple times. Hence, this helps to save time.<br></li>
-          <li>Dive and conquer – A massive device is divided in small units and given to the synthesizer tool which gives out the optimized netlist which are then placed together on the top layer. <br></li>
+          <li>When there is a presence of multiple instantiations of the same component, then the module is synthesized a single time and replicated multiple times in the top and need not be synthesized multiple times. Hence, this helps to save time.<br></li>
+          <li>Dive and conquer – A massive device is divided into small units and given to the synthesizer tool which gives out the optimized netlist which is then placed together on the top layer. <br></li>
  </ol>
 
 Hierarchical design – the design is constituted of submodules and the hierarchy is preserved
@@ -137,6 +137,8 @@ Hierarchical design – the design is constituted of submodules and the hierarch
      <summary>
           <h4 id = 'Synthesis of Multiple Modules'> Synthesis of Multiple Modules <h4>
      </summary>
+
+Commands used to Synthesize multiple modules hierarchical design:
 
 ```
 read_liberty -lib <path to the .lib file>
@@ -152,10 +154,13 @@ Hierarchical design generated
 
 Netlist generated for the hierarchical design
 
+Command stp generates the netlist of the hierarchical design
 ```
 write_verilog -noattr <name given>
 !vim <name given>
 ```
+
+Netlist 
 ![6_multimodule netlist](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/9c23125b-a53e-4afa-8211-5e877a468f8c)
 
 </details>
@@ -166,21 +171,23 @@ write_verilog -noattr <name given>
      </summary>
 
 Flattened design generation
+Commands to flatten the design generated
 
 ```
 flatten
 show
 ```
-
+Flattened Design:
 ![7_multimoduled_flatten](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/73506e63-c6d9-496d-825b-7c77b8ebe9ed)
 
-Flattened netlist generation 
+Commands to flatten and generate the flattened netlist
 
 ```
 write_verilog -noattr <given name: multiple_modules_flat.v>
 !vim <given name: multiple_modules_flat.v>
 ```
 
+Flattened netlist
 ![7_multimoduled_flatten_netlist](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/b708604b-18b3-4569-8941-2ba31cbfcae5)
 
 </details>
@@ -190,6 +197,8 @@ write_verilog -noattr <given name: multiple_modules_flat.v>
           <h4 id = 'Sub module level synthesis'> Sub module level synthesis <h4>
      </summary>
 
+Commands to synthesized design of sub-module:
+
 ```
 read_liberty -lib <path to .lib file>
 read_verilog <name of the verilog file>
@@ -197,6 +206,8 @@ synth -top sub_module1
 abc -liberty  <path to .lib file>
 show
 ```
+
+Generated design of the submodule:
 
 ![8_submodule1_design](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/a7b831aa-d032-4104-b5b8-19bd874fbb09)
 
