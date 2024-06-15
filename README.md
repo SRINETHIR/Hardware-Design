@@ -1,6 +1,6 @@
 # VSD - Hardware-Development Peogram
 
-The progress made in the VSD-Hardware Development Program :
+<h3>The progress made in the VSD-Hardware Development Program :</h3>
 <details>
 <summary>
 <h2 id = 'Week0'>Week0</h2>
