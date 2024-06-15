@@ -120,8 +120,8 @@ ____
 Synthesis of multimodule file – with 2 submodules.<br>
 Synthesis is important at the submodule level for 2 major reasons:
 <ol>
-          <li>reason 1<br></li>
-          <li>reason 2<br></li>
+          <li>When there is a presence of multiple instantiations of same component, then the module is synthesised single time and replicated multiple times in the top and need not be synthesized multiple times. Hence, this helps to save time.<br></li>
+          <li>Dive and conquer – A massive device is divided in small units and given to the synthesizer tool which gives out the optimized netlist which are then placed together on the top layer. <br></li>
  </ol>
 
 Hierarchical design – the design is constituted of submodules and the hierarchy is preserved
