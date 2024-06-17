@@ -274,5 +274,28 @@ Plot for the simulation of the Synchronous reset:
 
 </details>
 
+<details>
+     <summary>
+          <h4 id = 'Synthesis of Asynchronous reset'> Simulation of Asynchronous reset <h4>
+     </summary>
+
+Commands to simulate Asynchronous reset:
+
+```
+read_liberty <path to .lib file>
+read_verilog -lib <name of Verilog file: dff_asyncres.v>
+synth -top <Name given: dff_asyncres>
+dfflibmap -liberty <path to .lib file>
+abc -liberty <path to .lib file>
+show
+
+```
+
+Design of the Asynchronous reset:
+
+![1_dff_asyncres](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/a304689a-b89e-46e6-a3df-51751f72f5a9)
+
+</details>
+
 </details>
 
