@@ -297,5 +297,54 @@ Design of the Asynchronous reset:
 
 </details>
 
+<details>
+     <summary>
+          <h4 id = 'Synthesis of Asynchronous set'> Simulation of Asynchronous set <h4>
+     </summary>
+
+Commands to simulate Asynchronous set:
+
+```
+read_liberty <path to .lib file>
+read_verilog  -lib <name of Verilog file: dff_async_set.v>
+synth -top <Name given: dff_async_set.v >
+dfflibmap -liberty <path to .lib file>
+abc -liberty <path to .lib file>
+show
+
+```
+
+Design of the Asynchronous set:
+
+![2_dff_async_set](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/fd083ad5-5e68-4301-a5d9-03fde722f728)
+
+</details>
+
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Synthesis of Synchronous reset'> Simulation of Synchronous reset <h4>
+     </summary>
+
+Commands to simulate Synchronous reset:
+
+```
+read_liberty <path to .lib file>
+read_verilog  -lib <name of Verilog file: dff_async_set.v>
+synth -top <Name given: dff_async_set.v >
+dfflibmap -liberty <path to .lib file>
+abc -liberty <path to .lib file>
+show
+
+```
+
+Design of the Synchronous reset:
+
+![3_dff_syncres](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/1bfcc4be-6d3b-4628-8d5c-d3347ff453e3)
+
+</details>
+
 </details>
 
