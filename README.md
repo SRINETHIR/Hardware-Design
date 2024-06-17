@@ -124,7 +124,7 @@ write_verilog -noattr <name of the netlist to be generated.v>
 
 ____
 
-Synthesis of multimodule file – with 2 submodules.<be><br>
+Synthesis of multimodule file – with 2 submodules.<br><br>
 Synthesis is important at the submodule level for 2 major reasons:
 <ol>
           <li>When there is a presence of multiple instantiations of the same component, then the module is synthesized a single time and replicated multiple times in the top and need not be synthesized multiple times. Hence, this helps to save time.<br></li>
@@ -152,9 +152,9 @@ Hierarchical design generated
 
 ![5_multimodule synth](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/4af7455b-d730-44f8-bc94-60155dc21db0)
 
-Netlist generated for the hierarchical design
+Generating a netlist for the hierarchical design
 
-Command stp generates the netlist of the hierarchical design
+Command to generate the netlist of the hierarchical design
 ```
 write_verilog -noattr <name given>
 !vim <name given>
