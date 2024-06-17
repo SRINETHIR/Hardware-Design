@@ -2,7 +2,7 @@
 The progress made in the VSD-Hardware Development Program :
 <details>
      <summary>
-          <h2 id = 'Week0'>Week0</h2>
+          <h2 id = 'Week 0'>Week 0</h2>
      </summary>
      Installation in UBUNTU
      <h3>System Information</h3>
@@ -58,7 +58,7 @@ Successful installation of iverilog:
 
 <details>
      <summary>
-          <h2 id = 'Week1'>Week1</h2>
+          <h2 id = 'Week 1'>Week 1</h2>
      </summary>
      <h3>Day 1</h3>
      
@@ -347,7 +347,7 @@ Design of the Synchronous reset:
 
 <details>
      <summary>
-          <h2 id = 'Week2'>Week2</h2>
+          <h2 id = 'Week 2'>Week 2</h2>
      </summary>
           
 <h3>Day 3</h3>
