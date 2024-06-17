@@ -347,7 +347,7 @@ Design of the Synchronous reset:
 
 <details>
      <summary>
-          <h2 id = 'Week0'>Week0</h2>
+          <h2 id = 'Week2'>Week2</h2>
      </summary>
           
 <h3>Day 3</h3>
