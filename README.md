@@ -343,6 +343,16 @@ Design of the Synchronous reset:
 ![3_dff_syncres](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/1bfcc4be-6d3b-4628-8d5c-d3347ff453e3)
 
 </details>
-
 </details>
+
+<details>
+     <summary>
+          <h2 id = 'Week0'>Week0</h2>
+     </summary>
+          
+<h3>Day 3</h3>
+     
+____
+</details>
+     
 
