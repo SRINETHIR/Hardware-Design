@@ -321,8 +321,6 @@ Design of the Asynchronous set:
 </details>
 
 
-</details>
-
 <details>
      <summary>
           <h4 id = 'Synthesis of Synchronous reset'> Simulation of Synchronous reset <h4>
