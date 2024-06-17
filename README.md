@@ -213,5 +213,66 @@ Generated design of the submodule:
 
 
 </details>
+
+<details>
+     <summary>
+          <h4 id = 'Simulation of Asynchronous reset'> Simulation of Asynchronous reset <h4>
+     </summary>
+
+Commands to simulate Asynchronous reset:
+
+```
+iverilog <Name of Verilog file: dff_asyncres.v Name of testbench: tb_dff_asyncres.v>
+./a.out
+gtkwave <Name of the vcd file: tb_dff_asyncres.vcd>
+
+```
+
+Plot for the simulation of Asynchronous reset:
+
+![4_dff_asyncres_simulation](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/6a07bf59-f8be-4366-a41e-2c72ee9fffa0)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Simulation of Asynchronous set'> Simulation of Asynchronous set <h4>
+     </summary>
+
+Commands to simulate Asynchronous set:
+
+```
+iverilog <Name of Verilog file: dff_async_set.v Name of testbench: tb_dff_async_set.v>
+./a.out
+gtkwave <Name of the vcd file: tb_dff_async_set.vcd>
+
+```
+
+Plot for the simulation of the Asynchronous set:
+
+![5_dff_async_set_simulation](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/ff1f1381-111f-4fef-90d4-f0d0110a2a8e)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Simulation of Synchronous reset'> Simulation of Synchronous reset <h4>
+     </summary>
+
+Commands to simulate Synchronous reset:
+
+```
+iverilog <Name of Verilog file: dff_syncres.v Name of testbench: tb_dff_syncres.v>
+./a.out
+gtkwave <Name of the vcd file: tb_dff_syncres.vcd>
+
+```
+
+Plot for the simulation of the Synchronous reset:
+
+![6_dff_syncres_simulation](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/85e9a1ee-7b5d-414d-8184-e25ed0ec8882)
+
+</details>
+
 </details>
 
