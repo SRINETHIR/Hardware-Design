@@ -161,6 +161,7 @@ write_verilog -noattr <name given>
 ```
 
 Netlist 
+
 ![6_multimodule netlist](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/9c23125b-a53e-4afa-8211-5e877a468f8c)
 
 </details>
