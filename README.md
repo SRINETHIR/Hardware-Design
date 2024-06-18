@@ -179,6 +179,7 @@ flatten
 show
 ```
 Flattened Design:
+
 ![7_multimoduled_flatten](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/73506e63-c6d9-496d-825b-7c77b8ebe9ed)
 
 Commands to flatten and generate the flattened netlist
@@ -189,6 +190,7 @@ write_verilog -noattr <given name: multiple_modules_flat.v>
 ```
 
 Flattened netlist
+
 ![7_multimoduled_flatten_netlist](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/b708604b-18b3-4569-8941-2ba31cbfcae5)
 
 </details>
