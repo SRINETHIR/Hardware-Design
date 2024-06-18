@@ -279,7 +279,7 @@ Plot for the simulation of the Synchronous reset:
 
 <details>
      <summary>
-          <h4 id = 'Synthesis of Asynchronous reset'> Simulation of Asynchronous reset <h4>
+          <h4 id = 'Synthesis of Asynchronous reset'> Synthesis of Asynchronous reset <h4>
      </summary>
 
 Commands to simulate Asynchronous reset:
@@ -302,7 +302,7 @@ Design of the Asynchronous reset:
 
 <details>
      <summary>
-          <h4 id = 'Synthesis of Asynchronous set'> Simulation of Asynchronous set <h4>
+          <h4 id = 'Synthesis of Asynchronous set'> Synthesis of Asynchronous set <h4>
      </summary>
 
 Commands to simulate Asynchronous set:
@@ -326,7 +326,7 @@ Design of the Asynchronous set:
 
 <details>
      <summary>
-          <h4 id = 'Synthesis of Synchronous reset'> Simulation of Synchronous reset <h4>
+          <h4 id = 'Synthesis of Synchronous reset'> Synthesis of Synchronous reset <h4>
      </summary>
 
 Commands to simulate Synchronous reset:
