@@ -537,9 +537,9 @@ Design of optimized multiple_module_opt2.v:
 Commands to Simulation of optimized dff_const1.v:
 
 ```
-iverilog dff_const1.v tb_dff_const1.v
+iverilog <Name of verilog file: dff_const1.v Name of testbench: tb_dff_const1.v>
 ./a.out
-gtkwave tb_dff_const1.vcd
+gtkwave <Nmae of vcd file: tb_dff_const1.vcd>
 
 ```
 
@@ -581,9 +581,9 @@ Design of optimized dff_const1.v:
 Commands to Simulation of optimized dff_const2.v:
 
 ```
-iverilog dff_const2.v tb_dff_const2.v
+iverilog <Name of verilog file: dff_const2.v Name of testbench: tb_dff_const2.v>
 ./a.out
-gtkwave tb_dff_const2.vcd
+gtkwave <Nmae of vcd file: tb_dff_const2.vcd>
 
 ```
 
