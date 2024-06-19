@@ -705,6 +705,50 @@ Design of optimized dff_const4.v:
 
 </details>
 
+<details>
+     <summary>
+          <h4 id = 'Simulation of optimized dff_const5.v'> Simulation of optimized dff_const5.v <h4>
+     </summary>
+
+Commands to Simulation of optimized dff_const5.v:
+
+```
+iverilog <Name of verilog file: dff_const5.v Name of testbench: tb_dff_const5.v>
+./a.out
+gtkwave <Nmae of vcd file: tb_dff_const5.vcd>
+
+```
+
+Plot of optimized dff_const5.v:
+
+![1_Simulation_const5](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/90afcfaf-057e-489c-b087-0610e043d425)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Synthesis of optimized dff_const5.v'> Synthesis of optimized dff_const5.v <h4>
+     </summary>
+
+Commands to Synthesis of optimized dff_const5.v:
+
+```
+yosys
+read_liberty -lib <path to .lib file>
+read_verilog <Name of verilog file: dff_const5.v>
+synth -top <Given name: dff_const5>
+dfflibmap -liberty <path to .lib file>
+abc -liberty <path to .lib file>
+show
+
+```
+
+Design of optimized dff_const5.v:
+
+![2_Synthesis_const5](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/ec72b940-b1b0-445d-a439-42e4e66eecaa)
+
+</details>
+
 </details>
      
 
