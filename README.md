@@ -617,6 +617,94 @@ Design of optimized dff_const2.v:
 
 </details>
 
+<details>
+     <summary>
+          <h4 id = 'Simulation of optimized dff_const3.v'> Simulation of optimized dff_const3.v <h4>
+     </summary>
+
+Commands to Simulation of optimized dff_const3.v:
+
+```
+iverilog <Name of verilog file: dff_const3.v Name of testbench: tb_dff_const3.v>
+./a.out
+gtkwave <Nmae of vcd file: tb_dff_const3.vcd>
+
+```
+
+Plot of optimized dff_const3.v:
+
+![1_simulation_const3](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/d9ed5d0f-dd4b-40fd-82ed-2205e94c03a0)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Synthesis of optimized dff_const3.v'> Synthesis of optimized dff_const3.v <h4>
+     </summary>
+
+Commands to Synthesis of optimized dff_const3.v:
+
+```
+yosys
+read_liberty -lib <path to .lib file>
+read_verilog <Name of verilog file: dff_const3.v>
+synth -top <Given name: dff_const3>
+dfflibmap -liberty <path to .lib file>
+abc -liberty <path to .lib file>
+show
+
+```
+
+Design of optimized dff_const3.v:
+
+![2_synthesis_const3](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/c80cbf9d-272f-4d85-8b54-cd38a6c5d5ff)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Simulation of optimized dff_const4.v'> Simulation of optimized dff_const4.v <h4>
+     </summary>
+
+Commands to Simulation of optimized dff_const4.v:
+
+```
+iverilog <Name of verilog file: dff_const4.v Name of testbench: tb_dff_const4.v>
+./a.out
+gtkwave <Nmae of vcd file: tb_dff_const4.vcd>
+
+```
+
+Plot of optimized dff_const4.v:
+
+![3_simulation_const4](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/bdfcc35d-3123-439f-b476-a1a5c186d055)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Synthesis of optimized dff_const4.v'> Synthesis of optimized dff_const4.v <h4>
+     </summary>
+
+Commands to Synthesis of optimized dff_const4.v:
+
+```
+yosys
+read_liberty -lib <path to .lib file>
+read_verilog <Name of verilog file: dff_const4.v>
+synth -top <Given name: dff_const4>
+dfflibmap -liberty <path to .lib file>
+abc -liberty <path to .lib file>
+show
+
+```
+
+Design of optimized dff_const4.v:
+
+![4_synthesis_const4](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/63313dcc-137d-4cb6-98a3-21f9ce44fa96)
+
+</details>
+
 </details>
      
 
