@@ -356,6 +356,15 @@ Design of the Synchronous reset:
 <h3>Day 3</h3>
      
 ____
+
+Any logic can be optimized to save the design's power and area. The logic available is generally combinational or sequential based on the components used. Techniques used to optimize combinational logic include constant propagation and boolean logic optimization techniques like K Map and Quine McKlusky.
+<br>
+<br>
+The sequential logic optimization techniques are majorly divided into Basic and advanced. Sequential constant propagation is one of the basic sequential logic optimizations. Whereas the advanced sequential logic optimization includes state optimization, retiming and sequential logic cloning.
+<br>
+
+
+
 </details>
      
 
