@@ -360,10 +360,124 @@ ____
 Any logic can be optimized to save the design's power and area. The logic available is generally combinational or sequential based on the components used. Techniques used to optimize combinational logic include constant propagation and boolean logic optimization techniques like K Map and Quine McKlusky.
 <br>
 <br>
-The sequential logic optimization techniques are majorly divided into Basic and advanced. Sequential constant propagation is one of the basic sequential logic optimizations. Whereas the advanced sequential logic optimization includes state optimization, retiming and sequential logic cloning.
+<ol>
+     <li> Constant Propagation (direct optimizarion) <br></li>
+     <li> Boolean logic optimization <br></li>
+     <ul>
+          <li> K -Map </li>
+          <li> Quine Mcklusky </li>
+     </ul>
+     </ol>
+The sequential logic optimization techniques are majorly divided into Basic and advanced. Sequential constant propagation is one of the basic sequential logic optimizations. Whereas the advanced sequential logic optimization includes state optimization, retiring, and sequential logic cloning.
 <br>
+<ol>
+     <li> Basic sequential logic optimization <br></li>
+     <ul>
+          <li> Sequential constant propagation - the flop always propagates a constant called the sequential propagation constant when the clock is also involved. </li>
+     </ul>
+     <li> Advanced sequential logic optimization <br></li>
+     <ul>
+          <li> State Optimization - Optimization of unused states </li>
+          <li> Retiming - Splitting and pushing the combinational logic to decrease timings and increase the frequency. </li>
+          <li> Sequential logic cloning - Physical aware synthesis to obtain an optimized floor plan. </li>
+     </ul>
+     </ol>
 
+<details>
+     <summary>
+          <h4 id = 'Optimization of opt_check.v'> Optimization of opt_check.v <h4>
+     </summary>
 
+Commands to optimize opt_check.v:
+
+```
+yosys
+read_liberty -lib <path to .lib file>
+read_verilog <Name of Verilog file: opt_check.v>
+synth -top <Given name: opt_check>
+opt_clean -purge
+abc -liberty <path to .lib file> 
+show
+
+```
+
+Design of optimized opt_check.v:
+
+![1_opt_check](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/87a089aa-0d71-498f-9cb5-9d48bcaab02b)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Optimization of opt_check2.v'> Optimization of opt_check2.v <h4>
+     </summary>
+
+Commands to optimize opt_check2.v:
+
+```
+yosys
+read_liberty -lib <path to .lib file>
+read_verilog <Name of Verilog file: opt_check2.v>
+synth -top <Given name: opt_check2>
+opt_clean -purge
+abc -liberty <path to .lib file> 
+show
+
+```
+
+Design of optimized opt_check2.v:
+
+![2_opt_check2](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5528b3f4-1398-48ba-a94f-f60a88a2f339)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Optimization of opt_check3.v'> Optimization of opt_check3.v <h4>
+     </summary>
+
+Commands to optimize opt_check3.v:
+
+```
+yosys
+read_liberty -lib <path to .lib file>
+read_verilog <Name of Verilog file: opt_check3.v>
+synth -top <Given name: opt_check3>
+opt_clean -purge
+abc -liberty <path to .lib file> 
+show
+
+```
+
+Design of optimized opt_check3.v:
+
+![3_opt_check3](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/7a5abb34-f41c-4723-bf93-67cfe91d6da9)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Optimization of opt_check4.v'> Optimization of opt_check4.v <h4>
+     </summary>
+
+Commands to optimize opt_check4.v:
+
+```
+yosys
+read_liberty -lib <path to .lib file>
+read_verilog <Name of Verilog file: opt_check4.v>
+synth -top <Given name: opt_check4>
+opt_clean -purge
+abc -liberty <path to .lib file> 
+show
+
+```
+
+Design of optimized opt_check4.v:
+
+![4_opt_check4](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/7aba50b4-62fb-46ca-93ca-7bcb2dcd83eb)
+
+</details>
 
 </details>
      
