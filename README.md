@@ -479,6 +479,56 @@ Design of optimized opt_check4.v:
 
 </details>
 
+<details>
+     <summary>
+          <h4 id = 'Optimization of multiple_module_opt.v'> Optimization of multiple_module_opt.v <h4>
+     </summary>
+
+Commands to optimize multiple_module_opt.v:
+
+```
+yosys
+read_liberty -lib <path to .lib file>
+read_verilog <Name of Verilog file: multiple_module_opt.v>
+synth -top <Given name: multiple_module_opt>
+flatten
+opt_clean -purge
+abc -liberty <path to .lib file> 
+show
+
+```
+
+Design of optimized multiple_module_opt.v:
+
+![5_multiple_module_opt](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/70938d69-d6de-443e-9604-e5e098e9de3b)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Optimization of multiple_module_opt2.v'> Optimization of multiple_module_opt2.v <h4>
+     </summary>
+
+Commands to optimize multiple_module_opt2.v:
+
+```
+yosys
+read_liberty -lib <path to .lib file>
+read_verilog <Name of Verilog file: multiple_module_opt2.v>
+synth -top <Given name: multiple_module_opt2>
+flatten
+opt_clean -purge
+abc -liberty <path to .lib file> 
+show
+
+```
+
+Design of optimized multiple_module_opt2.v:
+
+![6_multiple_module_opt2](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/97e9eba5-b9a6-4997-8193-b35f87fbadf3)
+
+</details>
+
 </details>
      
 
