@@ -529,6 +529,27 @@ Design of optimized multiple_module_opt2.v:
 
 </details>
 
+<details>
+     <summary>
+          <h4 id = 'Simulation of dff_const1.v'> Simulation of dff_const1.v <h4>
+     </summary>
+
+Commands to Simulation of dff_const1.v:
+
+```
+iverilog dff_const1.v tb_dff_const1.v
+./a.out
+gtkwave tb_dff_const1.vcd
+
+
+```
+
+Plot of optimized dff_const1.v:
+
+![1_simulation_const1](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5f2bb628-e43c-4624-a822-14066ab676dd)
+
+</details>
+
 </details>
      
 
