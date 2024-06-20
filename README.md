@@ -749,6 +749,30 @@ Design of optimized dff_const5.v:
 
 </details>
 
+<details>
+     <summary>
+          <h4 id = 'Synthesis of optimized counter_opt.v'> Synthesis of optimized counter_opt.v <h4>
+     </summary>
+
+Commands to Synthesis of optimized counter_opt.v:
+
+```
+yosys
+read_liberty -lib <path to .lib file>
+read_verilog <Name of verilog file: counter_opt.v>
+synth -top <Given name: counter_opt>
+dfflibmap -liberty <path to .lib file>
+abc -liberty <path to .lib file>
+show
+
+```
+
+Design of optimized counter_opt.v:
+
+![1_sysnthesis_counteropt](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/8ebe1e29-c2ca-4fbf-8835-9fc9966dd03b)
+
+</details>
+
 </details>
      
 
