@@ -797,6 +797,11 @@ Design of optimized counter_opt2.v:
 
 </details>
 
+<h3>Day 4</h3>
+     
+____
+
+
 </details>
      
 
