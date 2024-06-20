@@ -773,6 +773,30 @@ Design of optimized counter_opt.v:
 
 </details>
 
+<details>
+     <summary>
+          <h4 id = 'Synthesis of optimized counter_opt2.v'> Synthesis of optimized counter_opt2.v <h4>
+     </summary>
+
+Commands to Synthesis of optimized counter_opt2.v:
+
+```
+yosys
+read_liberty -lib <path to .lib file>
+read_verilog <Name of verilog file: counter_opt2.v>
+synth -top <Given name: counter_opt>
+dfflibmap -liberty <path to .lib file>
+abc -liberty <path to .lib file>
+show
+
+```
+
+Design of optimized counter_opt2.v:
+
+![2_sysnthesis_counteropt2](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/96b5f583-e58c-4980-860c-850c27af60b9)
+
+</details>
+
 </details>
      
 
