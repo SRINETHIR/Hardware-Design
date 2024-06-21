@@ -834,6 +834,8 @@ Synthesis and simulation mismatch is mainly due to:
      <li> Non standard verilog coding </li>
 </ol>
 
+Due to this kind of mismatch in the network in synthesis and simulation, it is important to run GLS (Gate Level Synthesis) and match the expected outputs in the simulation. It had to be made sure that there is no synthesis - simulation mismatch due to the various above mentioned reasons.
+
 <details>
      <summary>
           <h4 id = 'RTL Simulation of ternary_operator_mux.v'> RTL Simulation of ternary_operator_mux.v <h4>
