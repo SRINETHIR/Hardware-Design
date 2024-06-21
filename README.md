@@ -939,6 +939,74 @@ The plot of GLS simulated bad_mux.v:
 </details>
 
 
+<details>
+     <summary>
+          <h4 id = 'RTL Simulation of blocking_caveat.v'> RTL Simulation of blocking_caveat.v <h4>
+     </summary>
+
+Commands to RTL Simulation of blocking_caveat.v:
+
+```
+iverilog <Name of verilog file: blocking_caveat.v> <Name of testbench: tb_blocking_caveat.v>
+./a.out
+gtkwave <tb_blocking_caveat.vcd> 
+
+```
+
+Plot of RTL simulated blocking_caveat.v:
+
+![1_RTL_simulation](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/63b11c84-d295-4f26-aaf3-6f5ca71484b8)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Synthesis of blocking_caveat.v'> Synthesis of blocking_caveat.v <h4>
+     </summary>
+
+Commands to Synthesis of blocking_caveat.v:
+
+```
+yosys
+read_liberty <path to .lib file>
+read_verilog <name of Verilog file: blocking_caveat.v>
+synth -top <Given name: blocking_caveat>
+abc -liberty <path to .lib file>
+write_verilog -noattr <name of netlist: blocking_caveat _net.v>
+show
+
+```
+
+Design of blocking_caveat.v:
+
+![2_synthesis](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/a35e671b-4702-4e36-ad07-205db1c3d899)
+
+Generated netlist of blocking_caveat.v
+
+![3_netlist](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/f2fcf81c-9742-429f-ab37-27b74feee757)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'GLS Simulation blocking_caveat.v'> GLS Simulation of blocking_caveat.v <h4>
+     </summary>
+
+Commands to GLS Simulation of blocking_caveat.v:
+
+```
+iverilog <Path to primitives.v file > <Path to sky130_fd_sc_hd__tt_025C_1v80.lib> <Name of netlist: blocking_caveat _net.v> <Name of testbench: tb_ blocking_caveat .v>
+./a.out
+gtkwave tb_ blocking_caveat.vdc
+
+```
+
+The plot of GLS simulated blocking_caveat.v:
+
+![4_GLS_simulation](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5bbeb91a-1948-46fe-a857-4a0e0fa47960)
+
+</details>
+
 </details>
      
 
