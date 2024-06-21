@@ -870,6 +870,74 @@ The plot of GLS simulated ternary_operator_mux.v:
 
 </details>
 
+<details>
+     <summary>
+          <h4 id = 'RTL Simulation of bad_mux.v'> RTL Simulation of bad_mux.v <h4>
+     </summary>
+
+Commands to RTL Simulation of bad_mux.v:
+
+```
+iverilog <Name of verilog file: bad_mux.v> <Name of testbench: tb_bad_mux.v>
+./a.out
+gtkwave <tb_bad_mux.vcd> 
+
+```
+
+Plot of RTL simulated bad_mux.v:
+
+![1_RTLsimulation_badmux](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/15b81bfc-5eb0-45f3-9e97-96e4a7092b90)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Synthesis of bad_mux.v'> Synthesis of bad_mux.v <h4>
+     </summary>
+
+Commands to Synthesis of bad_mux.v:
+
+```
+yosys
+read_liberty <path to .lib file>
+read_verilog <name of Verilog file: bad_mux.v>
+synth -top <Given name: bad_mux>
+abc -liberty <path to .lib file>
+write_verilog -noattr <name of netlist: bad_mux_net.v>
+show
+
+```
+
+Design of bad_mux.v:
+
+![2_synthesis_badmux](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5d3493fb-d6ba-4ad1-8767-3af8d9a240dd)
+
+Generated netlist of bad_mux.v
+
+![3_netlist_badmux](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/fcdce4fa-284f-41cd-8f86-7d0973e63e85)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'GLS Simulation of bad_mux.v'> GLS Simulation of bad_mux.v <h4>
+     </summary>
+
+Commands to GLS Simulation of bad_mux.v:
+
+```
+iverilog <Path to primitives.v file > <Path to sky130_fd_sc_hd__tt_025C_1v80.lib> <Name of netlist: bad_mux_net.v> <Name of testbench: tb_bad_mux.v>
+./a.out
+gtkwave tb_bad_mux.vdc
+
+```
+
+The plot of GLS simulated bad_mux.v:
+
+![4_GLSsimulation_badmux](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/c274a043-484a-4b72-bc9d-951748854705)
+
+</details>
+
 
 </details>
      
