@@ -802,6 +802,75 @@ Design of optimized counter_opt2.v:
 ____
 
 
+<details>
+     <summary>
+          <h4 id = 'RTL Simulation of ternary_operator_mux.v'> RTL Simulation of ternary_operator_mux.v <h4>
+     </summary>
+
+Commands to RTL Simulation of ternary_operator_mux.v:
+
+```
+iverilog <Name of Verilog file: ternary_operator_mux.v> <Nmae of test bench: tb_ternary_operator_mux.v>
+./a.out
+gtkwave tb_ternary_operator_mux.vdc
+
+```
+
+Plot of RTL simulated ternary_operator_mux.v:
+
+![1_ternaryoperator_rtlsimulation](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/92d12933-f0ed-49d4-b049-7091e19f0743)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Synthesis of ternary_operator_mux.v'> Synthesis of ternary_operator_mux.v <h4>
+     </summary>
+
+Commands to Synthesis of ternary_operator_mux.v:
+
+```
+yosys
+read_liberty <path to .lib file>
+read_verilog <name of Verilog file: ternary_operator_mux.v>
+synth -top <Given name: ternary_operator_mux>
+abc -liberty <path to .lib file>
+write_verilog -noattr <name of netlist: ternary_operator_mux_net.v>
+show
+
+```
+
+Design of ternary_operator_mux.v:
+
+![2_ternaryoperator_design](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/9fd54f5f-2e67-4a06-87a5-591cae3f03de)
+
+Generated netlist of ternary_operator_mux.v
+
+![3_netlist_ternaryoperator](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/68a3a65d-4ef3-401e-960c-5288c22c16ba)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'GLS Simulation of ternary_operator_mux.v'> GLS Simulation of ternary_operator_mux.v <h4>
+     </summary>
+
+Commands to GLS Simulation of ternary_operator_mux.v:
+
+```
+iverilog <Path to primitives.v file > <Path to sky130_fd_sc_hd__tt_025C_1v80.lib> <Name of netlist: ternary_operator_mux_net.v> <Name of testbench: tb_ternary_operator_mux.v>
+./a.out
+gtkwave tb_ternary_operator_mux.vdc
+
+```
+
+The plot of GLS simulated ternary_operator_mux.v:
+
+![4_ternaryoperator_GLSsimulation](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/e792915d-f8eb-4a56-a88c-5c344097578c)
+
+</details>
+
+
 </details>
      
 
