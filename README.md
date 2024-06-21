@@ -557,6 +557,7 @@ gtkwave <Nmae of vcd file: tb_dff_const1.vcd>
 ```
 
 Plot of optimized dff_const1.v:
+From the plot, we can see that once the reset is low, Q waits for the next rising edge of the clock to change.
 
 ![1_simulation_const1](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5f2bb628-e43c-4624-a822-14066ab676dd)
 
@@ -601,6 +602,7 @@ gtkwave <Nmae of vcd file: tb_dff_const2.vcd>
 ```
 
 Plot of optimized dff_const2.v:
+From the plot, we can see that remains high regardless of the changes in reset and clock. This is because the clock has no rising edge once the reset goes low from high.
 
 ![3_simulation_const2](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/c3d4f977-925c-4252-a4b0-24c73549bbc6)
 
@@ -645,6 +647,7 @@ gtkwave <Nmae of vcd file: tb_dff_const3.vcd>
 ```
 
 Plot of optimized dff_const3.v:
+From the plot, we can infer that Q does not follow Q1 directly. In the rising edge of the clock, Q1 takes some delay(Tcq) hence the high signal of Q1 is detected lately resulting in Q becoming high in the next rising edge of the clock. Due to this there is an instantaneous drop of the signal Q.
 
 ![1_simulation_const3](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/d9ed5d0f-dd4b-40fd-82ed-2205e94c03a0)
 
