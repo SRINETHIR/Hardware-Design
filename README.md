@@ -405,6 +405,8 @@ Design of optimized opt_check.v:
 
 ![1_opt_check](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/87a089aa-0d71-498f-9cb5-9d48bcaab02b)
 
+The design of the opt_check is optimized by only using a 2 input and gate.
+
 </details>
 
 <details>
@@ -428,6 +430,9 @@ show
 Design of optimized opt_check2.v:
 
 ![2_opt_check2](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5528b3f4-1398-48ba-a94f-f60a88a2f339)
+
+The design of the opt_check2 is optimized by only using a 2 input or gate.
+
 
 </details>
 
@@ -453,6 +458,8 @@ Design of optimized opt_check3.v:
 
 ![3_opt_check3](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/7a5abb34-f41c-4723-bf93-67cfe91d6da9)
 
+The design of the opt_check3 is optimized by only using a 3 input and gate.
+
 </details>
 
 <details>
@@ -476,6 +483,8 @@ show
 Design of optimized opt_check4.v:
 
 ![4_opt_check4](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/7aba50b4-62fb-46ca-93ca-7bcb2dcd83eb)
+
+The design of the opt_check4 is optimized by only using a 2-input xor gate.
 
 </details>
 
@@ -502,6 +511,8 @@ Design of optimized multiple_module_opt.v:
 
 ![5_multiple_module_opt](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/70938d69-d6de-443e-9604-e5e098e9de3b)
 
+The design of the multiple_module_opt is optimized by only using a 2-input and gate and or gate.
+
 </details>
 
 <details>
@@ -526,6 +537,8 @@ show
 Design of optimized multiple_module_opt2.v:
 
 ![6_multiple_module_opt2](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/97e9eba5-b9a6-4997-8193-b35f87fbadf3)
+
+The design of the multiple_module_opt2 is optimized by using no standard cells.
 
 </details>
 
