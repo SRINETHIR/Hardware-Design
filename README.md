@@ -822,6 +822,17 @@ Design of optimized counter_opt2.v:
 ____
 
 
+GLS is a gate-level stimulus. A single testbench will align for both a design and a netlist.
+GLS is used to check the logical correctness of a design after the synthesis. GLS used here don't consider delay annotations but generally, it is made sure that the timing of the design is met. The meaning of and, or and many other keywords used in the netlist is mentioned in the gate-level verilog models. GLS is used to verify the functionality of the design.
+<br>
+There are many reasons to verify the functionality of the design. One of the major reasons is synthesis and simulation mismatch.
+Synthesis and simulation mismatch is mainly due to:
+<ol>
+     <li> Missing sensitivity test </li>
+     <li> Blocking vs Non - Blocking assignments </li>
+     <li> Non standard verilog coding </li>
+</ol>
+
 <details>
      <summary>
           <h4 id = 'RTL Simulation of ternary_operator_mux.v'> RTL Simulation of ternary_operator_mux.v <h4>
@@ -837,6 +848,7 @@ gtkwave tb_ternary_operator_mux.vdc
 ```
 
 Plot of RTL simulated ternary_operator_mux.v:
+The plot depicts a 2x1 Mux. That is the output y takes the value of i0 when the select is low and the output y takes the value of i1 when the select is high.
 
 ![1_ternaryoperator_rtlsimulation](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/92d12933-f0ed-49d4-b049-7091e19f0743)
 
@@ -885,6 +897,7 @@ gtkwave tb_ternary_operator_mux.vdc
 ```
 
 The plot of GLS simulated ternary_operator_mux.v:
+We can observe the mismatch is the simulation.
 
 ![4_ternaryoperator_GLSsimulation](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/e792915d-f8eb-4a56-a88c-5c344097578c)
 
