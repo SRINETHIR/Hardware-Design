@@ -692,6 +692,7 @@ gtkwave <Nmae of vcd file: tb_dff_const4.vcd>
 ```
 
 Plot of optimized dff_const4.v:
+From the plot we can infer the Q and Q1 both remain high regardless of  clock and reset.
 
 ![3_simulation_const4](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/bdfcc35d-3123-439f-b476-a1a5c186d055)
 
@@ -736,6 +737,7 @@ gtkwave <Nmae of vcd file: tb_dff_const5.vcd>
 ```
 
 Plot of optimized dff_const5.v:
+From the plot, we can infer that Q1 becomes high from low as soon as the reset goes low from high. Q follows Q1 in the next rising edge of the clock.
 
 ![1_Simulation_const5](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/90afcfaf-057e-489c-b087-0610e043d425)
 
@@ -760,6 +762,7 @@ show
 ```
 
 Design of optimized dff_const5.v:
+The design is optimized in such a way that it uses only one flipflop. We can see that only the last bit of the counter toggles and hence only one flipflop is used. The unused bits are completely optimized without using flipflop as it is not related to the primary inputs. Used output - count[0].
 
 ![2_Synthesis_const5](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/ec72b940-b1b0-445d-a439-42e4e66eecaa)
 
@@ -784,6 +787,7 @@ show
 ```
 
 Design of optimized counter_opt.v:
+All the 3 flipflops are used and the optimized design is shown below
 
 ![1_sysnthesis_counteropt](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/8ebe1e29-c2ca-4fbf-8835-9fc9966dd03b)
 
