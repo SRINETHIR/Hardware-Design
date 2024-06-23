@@ -1057,8 +1057,6 @@ The correct plot can be seen as it takes the current value of d.
           <h4 id = 'Basic of C'> Basic of C <h4>
      </summary>
 
-</details>
-
 Code to install leafpad editor
 
 ```
@@ -1078,6 +1076,8 @@ Output of the program
 
 ![2_op](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/9a3f2141-c26a-4bb3-9c06-31a07f25e7c9)
      
+</details>
+
 </details>
      
 
