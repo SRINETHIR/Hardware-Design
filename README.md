@@ -1062,7 +1062,7 @@ Code to install leafpad editor
 ```
 sudo snap install leafpad
 ```
-Open a leadpad editor to write the C program with the code below:
+Open a leadpad editor to write the C program and run the code:
 
 ```
 leafpad <Given name of the C file – sum1ton.c> &
