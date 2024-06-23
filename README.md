@@ -1046,5 +1046,38 @@ The correct plot can be seen as it takes the current value of d.
 </details>
 
 </details>
+
+<details>
+     <summary>
+          <h2 id = 'Week 0'>Week 0</h2>
+     </summary>
+
+<details>
+     <summary>
+          <h4 id = 'Basic of C'> Basic of C <h4>
+     </summary>
+
+</details>
+
+Code to install leafpad editor
+
+```
+sudo snap install leafpad
+```
+Open a leadpad editor to write the C program with the code below:
+
+```
+leafpad <Given name of the C file – sum1ton.c> &
+gcc <Name of the C file – sum1ton.c>
+./a.out
+```
+
+![1_program](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/b7838f22-a5e4-45d5-af14-751ae33beaf5)
+
+Output of the program
+
+![2_op](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/9a3f2141-c26a-4bb3-9c06-31a07f25e7c9)
+     
+</details>
      
 
