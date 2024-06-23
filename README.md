@@ -1049,7 +1049,7 @@ The correct plot can be seen as it takes the current value of d.
 
 <details>
      <summary>
-          <h2 id = 'Week 0'>Week 0</h2>
+          <h2 id = 'Week 3'>Week 3</h2>
      </summary>
 
 <details>
