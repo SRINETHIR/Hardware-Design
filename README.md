@@ -1054,7 +1054,7 @@ The correct plot can be seen as it takes the current value of d.
 
 <details>
      <summary>
-          <h3 id = 'Basic of C'> Basic of C <h3>
+          <h4 id = 'Basic of C'> Basic of C <h4>
      </summary>
 
 Code to install leafpad editor
