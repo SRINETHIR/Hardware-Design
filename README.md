@@ -1131,6 +1131,8 @@ Assembly language for reduced instruction set with increased speed:
 `/main` is used to locate the main function of the C program.
 `riscv64-unknown-elf-gcc` - risc64 indicates the architecture
 `elf` - elf is the executable and linkable format is the file format which is generally used for executable files.
+`lp64` - Indicates that the system uses 64-bit architecture with long integer and pointer.
+`rv64i` - i stands for interger in 64 bit RISC V.
 
 General Optimization flags:
 
@@ -1152,8 +1154,6 @@ General Optimization flags:
 > ` Os `: This flag is used to optimize the size of the code by reducing the code size, which is useful for efficient memory usage.
 
 
-`lp64` - Indicates that the system uses 64-bit architecture with long integer and pointer.
-`rv64i` - i stands for interger in 64 bit RISC V.
 
 
   
