@@ -1128,13 +1128,13 @@ Assembly language for reduced instruction set with increased speed:
 
 ![5_assemble code_fast](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/95eeea95-3413-4f8f-b863-f8ace542940e)
 
-`/main` is used to locate the main function of the C program.
-`riscv64-unknown-elf-gcc` - risc64 indicates the architecture
-`elf` - elf is the executable and linkable format is the file format which is generally used for executable files.
-`lp64` - Indicates that the system uses 64-bit architecture with long integer and pointer.
-`rv64i` - i stands for interger in 64 bit RISC V.
+`/main` is used to locate the main function of the C program.<br><br>
+`riscv64-unknown-elf-gcc` - risc64 indicates the architecture.<br><br>
+`elf` - elf is the executable and linkable format is the file format which is generally used for executable files.<br><br>
+`lp64` - Indicates that the system uses 64-bit architecture with long integer and pointer.<br><br>
+`rv64i` - i stands for interger in 64 bit RISC V.<br>
 
-General Optimization flags:
+**General Optimization flags:**
 
 > ` -O1 ` -  This is the optimization flag. This compilation flag optimizes the code without greatly affecting the compilation time. It reduces the code size and improves performance without significantly increasing compilation time. It maintains the speed between space and the speed of the code.
 > <br>
@@ -1152,10 +1152,6 @@ General Optimization flags:
 > <br>
 > <br>
 > ` Os `: This flag is used to optimize the size of the code by reducing the code size, which is useful for efficient memory usage.
-
-
-
-
   
 </details>
 
