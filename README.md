@@ -1137,19 +1137,19 @@ General Optimization flags:
 > ` -O1 ` -  This is the optimization flag. This compilation flag optimizes the code without greatly affecting the compilation time. It reduces the code size and improves performance without significantly increasing compilation time. It maintains the speed between space and the speed of the code.
 > <br>
 > <br>
-> ` -Ofast ` - The ofast flag is for maximum optimization of the code.
+> ` -Ofast `: The ofast flag is for maximum optimization of the code.
 > <br>
 > <br>
-> ` -O0 ` - This is the default no-optimization state.
+> ` -O0 `: This is the default no-optimization state.
 > <br>
 > <br>
-> ` -O2 ` - This is a higher level of optimization. It helps to look for a balance between the compilation time and the run time performance.
+> ` -O2 `: This is a higher level of optimization. It helps to look for a balance between the compilation time and the run time performance.
 > <br>
 > <br>
->  ` -O3 ` - This is the maximum optimization that involves maximum and aggressive optimization. Try to achieve the ideal performance with compilation time lesser than the execution speed.
+>  ` -O3 `: This is the maximum optimization that involves maximum and aggressive optimization. Try to achieve the ideal performance with compilation time lesser than the execution speed.
 > <br>
 > <br>
-> ` Os ` - This flag is used to optimize the size of the code by reducing the code size, which is useful for efficient memory usage.
+> ` Os `: This flag is used to optimize the size of the code by reducing the code size, which is useful for efficient memory usage.
 
 
 
