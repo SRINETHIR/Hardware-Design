@@ -1084,6 +1084,53 @@ Output of the program
           <h4 id = 'RISC - V based lab'> RISC - V based lab <h4>
      </summary>
 
+Compiling a C program with a RISC V compiler
+
+The command to display the C code in the terminal is the cat command.
+```
+cat <Name of the C file: sum1ton.c>
+```
+
+![1_cat_program](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/29f2c5c5-2e0b-4c14-ae60-31cfc5ff53a8)
+
+Compiling the program with RISC V compiler 
+```
+riscv64-unknown-elf-gcc -o1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+```
+![2_risc_compiler](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/1f4e1955-f7fc-48c9-a024-21dd7114faed)
+
+Checking if the file is created after compiling
+```
+ls -ltr sum1ton.o
+```
+![1_check](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/e0a43bc2-80a3-422b-af6c-4635a9c10ee2)
+
+To see the assembly-level language, the assembly code is a byte addressing.
+```
+riscv64-unknown-elf-objdump -d sum1ton.o
+riscv64-unknown-elf-objdump -d sum1ton.o | less
+/main
+
+```
+![3_assemble code](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/3a949607-ca4f-46e0-8a85-f4d38689d89a)
+
+The number of instructions is reduced by the following code:
+
+```
+riscv64-unknown-elf-gcc -ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+riscv64-unknown-elf-objdump -d sum1ton.o | less
+/main
+
+```
+
+![4_risc_compiler_fast](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/895d3a10-d16f-4e45-9e56-f73b09b618b3)
+
+Assembly language for reduced instruction set:
+
+![5_assemble code_fast](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/95eeea95-3413-4f8f-b863-f8ace542940e)
+
+
+
   
 </details>
 
