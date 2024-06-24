@@ -1095,7 +1095,8 @@ cat <Name of the C file: sum1ton.c>
 
 Compiling the program with RISC V compiler 
 ```
-riscv64-unknown-elf-gcc -o1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+
 ```
 ![2_risc_compiler](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/1f4e1955-f7fc-48c9-a024-21dd7114faed)
 
@@ -1114,10 +1115,10 @@ riscv64-unknown-elf-objdump -d sum1ton.o | less
 ```
 ![3_assemble code](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/3a949607-ca4f-46e0-8a85-f4d38689d89a)
 
-The number of instructions is reduced by the following code:
+The number of instructions is reduced with increased speed by the following code (Maximum optimization):
 
 ```
-riscv64-unknown-elf-gcc -ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
 riscv64-unknown-elf-objdump -d sum1ton.o | less
 /main
 
@@ -1125,9 +1126,27 @@ riscv64-unknown-elf-objdump -d sum1ton.o | less
 
 ![4_risc_compiler_fast](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/895d3a10-d16f-4e45-9e56-f73b09b618b3)
 
-Assembly language for reduced instruction set:
+Assembly language for reduced instruction set with increased speed:
 
 ![5_assemble code_fast](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/95eeea95-3413-4f8f-b863-f8ace542940e)
+
+`/main` is used to locate the main function of the C program.
+`riscv64-unknown-elf-gcc` - risc64 indicates the architecture
+`elf` - elf is the executable and linkable format is the file format which is generally used for executable files.
+
+General Optimization flags:
+
+> ` -O1 ` -  This is the optimization flag. This compilation flag optimizes the code without greatly affecting the compilation time. It reduces the code size and improves performance without significantly increasing compilation time. It maintains the speed between space and the speed of the code.
+> <br>
+> ` -Ofast ` - The ofast flag is for maximum optimization of the code.
+> <br>
+> ` -O0 ` - This is the default no-optimization state.
+> <br>
+> ` -O2 ` - This is a higher level of optimization. It helps to look for a balance between the compilation time and the run time performance.
+> <br>
+>  ` -O3 ` - This is the maximum optimization that involves maximum and aggressive optimization. Try to achieve the ideal performance with compilation time lesser than the execution speed.
+> <br>
+> ` Os ` - This flag is used to optimize the size of the code by reducing the code size, which is useful for efficient memory usage.
 
 
 
