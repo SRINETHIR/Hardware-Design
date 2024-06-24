@@ -1062,7 +1062,7 @@ Code to install leafpad editor
 ```
 sudo snap install leafpad
 ```
-Open a leadpad editor to write the C program and run the code:
+Open a leadpad editor to write the C program and run the code by creating a file:
 
 ```
 leafpad <Given name of the C file – sum1ton.c> &
@@ -1076,6 +1076,15 @@ Output of the program
 
 ![2_op](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/9a3f2141-c26a-4bb3-9c06-31a07f25e7c9)
      
+</details>
+
+
+<details>
+     <summary>
+          <h4 id = 'RISC - V based lab'> RISC - V based lab <h4>
+     </summary>
+
+  
 </details>
 
 </details>
