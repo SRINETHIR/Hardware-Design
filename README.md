@@ -1062,7 +1062,7 @@ Code to install leafpad editor
 ```
 sudo snap install leafpad
 ```
-Open a leadpad editor to write the C program and run the code by creating a file:
+Open a leafpad editor to write the C program and run the code by creating a file:
 
 ```
 leafpad <Given name of the C file – sum1ton.c> &
@@ -1095,21 +1095,21 @@ cat <Name of the C file: sum1ton.c>
 
 Compiling the program with RISC V compiler 
 ```
-riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o <Output file name: sum1ton.o> <Input C source file: sum1ton.c>
 
 ```
 ![2_risc_compiler](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/1f4e1955-f7fc-48c9-a024-21dd7114faed)
 
 Checking if the file is created after compiling
 ```
-ls -ltr sum1ton.o
+ls -ltr <Output file name: sum1ton.o>
 ```
 ![1_check](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/e0a43bc2-80a3-422b-af6c-4635a9c10ee2)
 
 To see the assembly-level language, the assembly code is a byte addressing.
 ```
-riscv64-unknown-elf-objdump -d sum1ton.o
-riscv64-unknown-elf-objdump -d sum1ton.o | less
+riscv64-unknown-elf-objdump -d <Output file name: sum1ton.o>
+riscv64-unknown-elf-objdump -d <Output file name: sum1ton.o> | less
 /main
 ```
 ![3_assemble code](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/3a949607-ca4f-46e0-8a85-f4d38689d89a)
@@ -1117,8 +1117,8 @@ riscv64-unknown-elf-objdump -d sum1ton.o | less
 The number of instructions is reduced with increased speed by the following code (Maximum optimization):
 
 ```
-riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
-riscv64-unknown-elf-objdump -d sum1ton.o | less
+riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o <Output file name: sum1ton.o> <Input C source file: sum1ton.c>
+riscv64-unknown-elf-objdump -d <Output file name: sum1ton.o> | less
 /main
 ```
 
@@ -1151,6 +1151,9 @@ General Optimization flags:
 > <br>
 > ` Os `: This flag is used to optimize the size of the code by reducing the code size, which is useful for efficient memory usage.
 
+
+`lp64` - Indicates that the system uses 64-bit architecture with long integer and pointer.
+`rv64i` - i stands for interger in 64 bit RISC V.
 
 
   
