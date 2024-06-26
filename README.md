@@ -1155,6 +1155,43 @@ Assembly language for reduced instruction set with increased speed:
   
 </details>
 
+<details>
+     <summary>
+          <h4 id = 'Simulation of RISC V'> Simulation of RISC V <h4>
+     </summary>
+
+Commands to simulate RISC V
+```
+iverilog <Nmae of Verilog file: risc_v.v> <Name of testbench: risc_v_tb.v>
+./a.out
+gtkwave <Name of vcd file: risc_v.vcd>
+
+```
+
+Output waveform of simulated RISC V
+
+
+     
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Synthesis of RISC V'> Synthesis of RISC V <h4>
+     </summary>
+
+Commands to synthesize RISC V
+```
+
+
+```
+
+Netlist created
+
+     
+</details>
+
+
+
 </details>
      
 
