@@ -1062,16 +1062,17 @@ Code to install leafpad editor
 ```
 sudo snap install leafpad
 ```
-Open a leafpad editor to write the C program and run the code by creating a file:
-
+The snippet fd commands are used to open the leafpad editor, compile and run the written program 
 ```
 leafpad <Given name of the C file – sum1ton.c> &
 gcc <Name of the C file – sum1ton.c>
 ./a.out
 ```
+C Program that is written in the leafpad editor
+
 ![1_sum1ton_prgm](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/8d1223d6-121a-4710-bfbe-bececc7c96bd)
 
-Output of the program
+Output of the C program written 
 
 ![2_output_prgm](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/e3e87a48-9ecc-4b1f-9195-6c90c89583a5)
      
