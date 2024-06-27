@@ -1086,12 +1086,12 @@ Output of the C program written
 
 Compiling a C program with a RISC V compiler
 
-The command to display the C code in the terminal is the cat command.
+The command to display the C code in the terminal is the cat command:
 ```
 cat <Name of the C file: sum1ton.c>
 ```
 
-![3_riscv_code](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/bf460697-f027-4d20-bc2f-74c16e751515)
+![abc](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/f6b09cf0-8ca0-4e17-88fe-bed500a7e537)
 
 Compiling the program with RISC V compiler 
 ```
