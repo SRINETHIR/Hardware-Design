@@ -1093,34 +1093,49 @@ cat <Name of the C file: sum1ton.c>
 
 ![abc](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/f6b09cf0-8ca0-4e17-88fe-bed500a7e537)
 
-Compiling the program with RISC V compiler 
+Command to compile the C program with the RISC V compiler
+
 ```
 riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o <Output file name: sum1ton.o> <Input C source file: sum1ton.c>
 
 ```
 ![4_file_generated](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/cbf0dbd0-b435-42ff-9f9e-16c8fbbfa6c1)
 
-Checking if the file is created after compiling
+Checking if the output file (sum1ton.o) is created after compiling
 ```
 ls -ltr <Output file name: sum1ton.o>
 ```
 ![abc](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/0c86c2eb-40c1-4dec-8795-659dbaca09f7)
 
-To see the assembly-level language, the assembly code is a byte addressing.
+To see the assembly-level language, the assembly code is a byte addressing the following command is used.
+
 ```
 riscv64-unknown-elf-objdump -d <Output file name: sum1ton.o>
 riscv64-unknown-elf-objdump -d <Output file name: sum1ton.o> | less
 /main
 ```
+The number of instructions that are present in the main function with O1 optimization:
+
+(101bc-10184)/4 = E
+Decimal (E) = 14
+
+14 instructions of the main function
+
 ![5_assemblycode_O1](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/2aa760e8-8c26-4731-afc5-73bbb4d9ee94)
 
-The number of instructions is reduced with increased speed by the following code (Maximum optimization):
+The number of instructions is reduced with increased speed by the following code with Ofast optimization(Maximum optimization):
 
 ```
 riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o <Output file name: sum1ton.o> <Input C source file: sum1ton.c>
 riscv64-unknown-elf-objdump -d <Output file name: sum1ton.o> | less
 /main
 ```
+
+The number of instructions that are present in the main function with Ofast optimization:
+
+(100dc-100b0)/4 = B
+Decimal (B) = 11
+11 instructions of the main function
 
 ![xyz](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/345f3d98-a4a6-4020-b5e3-4f4307026bca)
 
