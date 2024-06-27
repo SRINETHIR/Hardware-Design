@@ -1090,20 +1090,20 @@ The command to display the C code in the terminal is the cat command.
 cat <Name of the C file: sum1ton.c>
 ```
 
-![1_cat_program](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/29f2c5c5-2e0b-4c14-ae60-31cfc5ff53a8)
+![3_riscv_code](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/bf460697-f027-4d20-bc2f-74c16e751515)
 
 Compiling the program with RISC V compiler 
 ```
 riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o <Output file name: sum1ton.o> <Input C source file: sum1ton.c>
 
 ```
-![2_risc_compiler](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/1f4e1955-f7fc-48c9-a024-21dd7114faed)
+![4_file_generated](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/cbf0dbd0-b435-42ff-9f9e-16c8fbbfa6c1)
 
 Checking if the file is created after compiling
 ```
 ls -ltr <Output file name: sum1ton.o>
 ```
-![1_check](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/e0a43bc2-80a3-422b-af6c-4635a9c10ee2)
+![abc](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/0c86c2eb-40c1-4dec-8795-659dbaca09f7)
 
 To see the assembly-level language, the assembly code is a byte addressing.
 ```
@@ -1111,7 +1111,7 @@ riscv64-unknown-elf-objdump -d <Output file name: sum1ton.o>
 riscv64-unknown-elf-objdump -d <Output file name: sum1ton.o> | less
 /main
 ```
-![3_assemble code](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/3a949607-ca4f-46e0-8a85-f4d38689d89a)
+![5_assemblycode_O1](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/2aa760e8-8c26-4731-afc5-73bbb4d9ee94)
 
 The number of instructions is reduced with increased speed by the following code (Maximum optimization):
 
@@ -1121,11 +1121,11 @@ riscv64-unknown-elf-objdump -d <Output file name: sum1ton.o> | less
 /main
 ```
 
-![4_risc_compiler_fast](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/895d3a10-d16f-4e45-9e56-f73b09b618b3)
+![xyz](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/345f3d98-a4a6-4020-b5e3-4f4307026bca)
 
 Assembly language for reduced instruction set with increased speed:
 
-![5_assemble code_fast](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/95eeea95-3413-4f8f-b863-f8ace542940e)
+![6_assemblycode_Ofast](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/515df89c-c430-46e2-b453-3524fb98781d)
 
 `/main` is used to locate the main function of the C program.<br><br>
 `riscv64-unknown-elf-gcc` - risc64 indicates the architecture.<br><br>
