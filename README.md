@@ -1131,15 +1131,14 @@ riscv64-unknown-elf-objdump -d <Output file name: sum1ton.o> | less
 /main
 ```
 
+![xyz](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/345f3d98-a4a6-4020-b5e3-4f4307026bca)
+
+Assembly language for reduced instruction set with increased speed.<br>
 The number of instructions that are present in the main function with Ofast optimization:
 
 (100dc-100b0)/4 = B
-Decimal (B) = 11
+Decimal (B) = 11<br>
 11 instructions of the main function
-
-![xyz](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/345f3d98-a4a6-4020-b5e3-4f4307026bca)
-
-Assembly language for reduced instruction set with increased speed:
 
 ![6_assemblycode_Ofast](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/515df89c-c430-46e2-b453-3524fb98781d)
 
@@ -1154,7 +1153,7 @@ Assembly language for reduced instruction set with increased speed:
 > ` -O1 ` -  This is the optimization flag. This compilation flag optimizes the code without greatly affecting the compilation time. It reduces the code size and improves performance without significantly increasing compilation time. It maintains the speed between space and the speed of the code.
 > <br>
 > <br>
-> ` -Ofast `: The ofast flag is for maximum optimization of the code.
+> ` -Ofast `: The ofast flag is for maximum code optimization.
 > <br>
 > <br>
 > ` -O0 `: This is the default no-optimization state.
@@ -1166,7 +1165,7 @@ Assembly language for reduced instruction set with increased speed:
 >  ` -O3 `: This is the maximum optimization that involves maximum and aggressive optimization. Try to achieve the ideal performance with compilation time lesser than the execution speed.
 > <br>
 > <br>
-> ` Os `: This flag is used to optimize the size of the code by reducing the code size, which is useful for efficient memory usage.
+> ` Os `: This flag is used to optimize the code size by reducing the code size, which is useful for efficient memory usage.
   
 </details>
 
