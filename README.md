@@ -1062,7 +1062,7 @@ Code to install leafpad editor
 ```
 sudo snap install leafpad
 ```
-The snippet fd commands are used to open the leafpad editor, compile and run the written program 
+The snippet for commands are used to open the leafpad editor, compile and run the written program 
 ```
 leafpad <Given name of the C file – sum1ton.c> &
 gcc <Name of the C file – sum1ton.c>
