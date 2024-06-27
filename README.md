@@ -1142,6 +1142,8 @@ Decimal (B) = 11<br>
 
 ![6_assemblycode_Ofast](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/515df89c-c430-46e2-b453-3524fb98781d)
 
+From the above observation, we can infer that the number of instructions changes as we use different optimization flags. We can see that Ofast optimization flag (11 instructions) has a lower number of instructions than when O1 optimization flag (14 instructions) is used.<br>
+
 `/main` is used to locate the main function of the C program.<br><br>
 `riscv64-unknown-elf-gcc` - risc64 indicates the architecture.<br><br>
 `elf` - elf is the executable and linkable format is the file format which is generally used for executable files.<br><br>
