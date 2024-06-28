@@ -1052,6 +1052,13 @@ The correct plot can be seen as it takes the current value of d.
           <h2 id = 'Week 3'>Week 3</h2>
      </summary>
 
+<h3>What is RISC V? </h3>
+     
+____
+
+RISC V stands for reduced instruction set computing – five, an open standard instruction set architecture (ISA). RISC V is a 32-bit processor with 31 general-purpose registers. RISC V has a highly optimized set of instructions for high efficiency and performance. RISC V is also highly portable, flexible, and compatible.
+
+
 <details>
      <summary>
           <h4 id = 'Basic of C'> Basic of C <h4>
@@ -1235,8 +1242,6 @@ The output waveform of Gate level simulated(GLS) RISC V
 
      
 </details>
-
-
 
 </details>
      
