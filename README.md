@@ -1064,6 +1064,8 @@ ____
 
 Pipelining subdivides a single-cycle processor into five pipeline stages. Hence, Five instructions can be executed simultaneously, one in each stage. Since, each stage has only one – fifth of the entire logic, the clock frequency is approximately five times faster.
 
+![risc](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/a669e8f9-8fb3-48d1-8555-4e1ca4d893bf)
+
 The pipelining stages of the architecture are:
 <br>
 <ol>
