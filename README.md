@@ -1067,11 +1067,11 @@ Pipelining subdivides a single-cycle processor into five pipeline stages. Hence,
 The pipelining stages of the architecture are:
 <br>
 <ol>
-<li>Instruction fetch - the instruction to be executed next is fetched from memory. The instruction is retrieved from the address in the program counter (PC), and the PC is then incremented to point to the next instruction.</li>
-<li>Decode - the fetched instruction is decoded to determine what actions are required. The opcode (operation code) and operands are identified.</li>
-<li>Execute - the actual computation specified by the instruction is performed. For arithmetic and logic operations, the ALU (Arithmetic Logic Unit) is used.</li>
-<li>Memory Access – Memory operations are handled in this stage. Data is read from the memory and placed in the register.</li>
-<li>Write Back - the result is written back to the appropriate register in the register file.</li>
+<li> Instruction fetch - the instruction to be executed next is fetched from memory. The instruction is retrieved from the address in the program counter (PC), and the PC is then incremented to point to the next instruction.</li><br>
+<li> Decode - the fetched instruction is decoded to determine what actions are required. The opcode (operation code) and operands are identified.</li><br>
+<li> Execute - the actual computation specified by the instruction is performed. For arithmetic and logic operations, the ALU (Arithmetic Logic Unit) is used.</li><br>
+<li> Memory Access – Memory operations are handled in this stage. Data is read from the memory and placed in the register.</li><br>
+<li> Write Back - the result is written back to the appropriate register in the register file.</li><br>
 </ol>
 
 <details>
