@@ -1058,6 +1058,20 @@ ____
 
 RISC V stands for reduced instruction set computing – five, an open standard instruction set architecture (ISA). RISC V is a 32-bit processor with 31 general-purpose registers. RISC V has a highly optimized set of instructions for high efficiency and performance. RISC V is also highly portable, flexible, and compatible.
 
+<h3> Piplining </h3>
+
+____
+
+Pipelining subdivides a single-cycle processor into five pipeline stages. Hence, Five instructions can be executed simultaneously, one in each stage. Since, each stage has only one – fifth of the entire logic, the clock frequency is approximately five times faster.
+
+<ol>
+The pipelining stages of the architecture are:
+<li>Instruction fetch - the instruction to be executed next is fetched from memory. The instruction is retrieved from the address in the program counter (PC), and the PC is then incremented to point to the next instruction.</li>
+<li>Decode - the fetched instruction is decoded to determine what actions are required. The opcode (operation code) and operands are identified.</li>
+<li>Execute - the actual computation specified by the instruction is performed. For arithmetic and logic operations, the ALU (Arithmetic Logic Unit) is used.</li>
+<li>Memory Access – Memory operations are handled in this stage. Data is read from the memory and placed in the register.</li>
+<li>Write Back - the result is written back to the appropriate register in the register file.</li>
+</ol>
 
 <details>
      <summary>
