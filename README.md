@@ -1183,9 +1183,11 @@ iverilog <Nmae of Verilog file: risc_v.v> <Name of testbench: risc_v_tb.v>
 gtkwave <Name of vcd file: risc_v.vcd>
 
 ```
+![1_risc_simulationCommands](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/15dea9e9-114a-47f1-b471-815b8f986c8a)
 
 Output waveform of simulated RISC V
 
+![2_risc_simulation](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/29d4a8a8-d795-47ee-a589-8073e2720eb9)
 
      
 </details>
@@ -1197,11 +1199,39 @@ Output waveform of simulated RISC V
 
 Commands to synthesize RISC V
 ```
-
+yosys
+read_liberty -lib <path to .lib file>
+read_verilog <Verilog file name: risc_v.v>
+synth -top <module name that has to be synthesized>
+abc -liberty <path to .lib file>
+write_verilog -noattr <Name of Netlist; risc_v_net.v>
 
 ```
 
-Netlist created
+We can see that the netlist for the RISC V design has been created in the directory 
+
+![5_riscv_netlist](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/f27a45df-766b-4369-a87b-55d6c201734a)
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'GLS Simulation of RISC V'> GLS Simulation of RISC V <h4>
+     </summary>
+
+Commands for GLS simulation RISC V
+```
+iverilog <Path to primitives.v file > <Path to sky130_fd_sc_hd__tt_025C_1v80.lib> <Name of netlist: risc_v_net.v> <Name of testbench: risc_v_tb.v>
+./a.out
+gtkwave risc_v.vdc
+
+```
+
+![3_risc_GLSsimulationCommands](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/7a0392dc-28b5-4819-87bc-9396fa3b1939)
+
+The output waveform of Gate level simulated(GLS) RISC V
+
+![4_risc_GLSsimulation](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/108fbddc-d72f-4e51-a382-f729af8c56a2)
 
      
 </details>
