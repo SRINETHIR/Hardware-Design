@@ -1117,6 +1117,8 @@ cat <Name of the C file: sum1ton.c>
 
 ![abc](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/f6b09cf0-8ca0-4e17-88fe-bed500a7e537)
 
+<h2> -O1 optimization of the code </h2>
+
 Command to compile the C program with the RISC V compiler
 
 ```
@@ -1147,6 +1149,8 @@ Decimal (E) = 14
 
 ![5_assemblycode_O1](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/2aa760e8-8c26-4731-afc5-73bbb4d9ee94)
 
+<h2> -Ofast optimization of the code </h2>
+
 The number of instructions is reduced with increased speed by the following code with Ofast optimization(Maximum optimization):
 
 ```
@@ -1166,7 +1170,7 @@ Decimal (B) = 11<br>
 
 ![6_assemblycode_Ofast](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/515df89c-c430-46e2-b453-3524fb98781d)
 
-From the above observation, we can infer that the number of instructions changes as we use different optimization flags. We can see that Ofast optimization flag (11 instructions) has a lower number of instructions than when O1 optimization flag (14 instructions) is used.<br>
+From the above observation, we can infer that the number of instructions changes as we use different optimization flags. We can see that the Ofast optimization flag (11 instructions) has fewer instructions than when the O1 optimization flag (14 instructions) is used.<br>
 
 `/main` is used to locate the main function of the C program.<br><br>
 `riscv64-unknown-elf-gcc` - risc64 indicates the architecture.<br><br>
@@ -1179,7 +1183,7 @@ From the above observation, we can infer that the number of instructions changes
 > ` -O1 ` -  This is the optimization flag. This compilation flag optimizes the code without greatly affecting the compilation time. It reduces the code size and improves performance without significantly increasing compilation time. It maintains the speed between space and the speed of the code.
 > <br>
 > <br>
-> ` -Ofast `: The ofast flag is for maximum code optimization.
+> ` -Ofast `: The Ofast flag is for maximum code optimization.
 > <br>
 > <br>
 > ` -O0 `: This is the default no-optimization state.
@@ -1193,12 +1197,13 @@ From the above observation, we can infer that the number of instructions changes
 > <br>
 > ` Os `: This flag is used to optimize the code size by reducing the code size, which is useful for efficient memory usage.
   
-Command to run the prgram with RISC V compiler and to execute the program to get the output
+Command to run the program with RISC V compiler and to execute the program to get the output
 ```
 riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o <Output file name: sum1ton.o> <Input C source file: sum1ton.c>
 spike pk <Name of the output file: sum1ton.o>
 
 ```
+The output is displayed in the terminal
 
 ![1_risc_prgmoutput](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/f0240a75-f979-46b1-aa43-155acabd8fd5)
 
