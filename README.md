@@ -989,7 +989,7 @@ gtkwave <tb_blocking_caveat.vcd>
 
 ```
 
-Plot of RTL simulated blocking_caveat.v:
+The plot of RTL simulated blocking_caveat.v:
 From the plot we can see that, it acts like a flop as d takes the previous value and not the current evaluated value.
 
 ![1_RTL_simulation](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/63b11c84-d295-4f26-aaf3-6f5ca71484b8)
@@ -1092,7 +1092,7 @@ leafpad <Given name of the C file – sum1ton.c> &
 gcc <Name of the C file – sum1ton.c>
 ./a.out
 ```
-C Program that is written in the leafpad editor
+C Program that is written in the Leafpad editor
 
 ![1_sum1ton_prgm](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/8d1223d6-121a-4710-bfbe-bececc7c96bd)
 
@@ -1207,6 +1207,36 @@ The output is displayed in the terminal
 
 ![1_risc_prgmoutput](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/f0240a75-f979-46b1-aa43-155acabd8fd5)
 
+Command to open the debugger to debug
+
+```
+spike -d pk <Name of the output file: sum1ton.o>
+
+```
+![1_degger](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/a0a07eb4-e45e-4802-bb0c-7cdc00f61259)
+
+Command to run the program counter to rum till a particular address
+```
+Until pc 0 <Memory location till which the program runs: 100b0>
+```
+
+![2_run](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/cd738260-c45a-4408-9830-61000e8d39b8)
+
+To view the contents of the register
+```
+reg 0 a2
+```
+![1_content](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/65847b8d-afed-456d-a0ec-2faa7a44d373)
+
+From the current instruction, if we want to run the next instruction, enter is being pressed. Once the enter key is pressed the debugger runs the next instruction.
+
+![1](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/a1367484-c30d-4e1c-b5ae-835f339370cc)
+
+We can see from the above screenshot that a value of (0x7a) is moved to the register a2, and hence if we view the value content of the register a2 we can observe the value to be 0x7a.
+
+![1](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/7b532840-eb01-4453-b7cf-062891b6c6a3)
+
+The command lui is load upper immediate which load the value to the destination register of the upper immediate where the upper immediate means the bits from 12 to 21 a2[31:12].
 
 </details>
 
