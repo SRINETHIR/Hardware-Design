@@ -1193,6 +1193,16 @@ From the above observation, we can infer that the number of instructions changes
 > <br>
 > ` Os `: This flag is used to optimize the code size by reducing the code size, which is useful for efficient memory usage.
   
+Command to run the prgram with RISC V compiler and to execute the program to get the output
+```
+riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o <Output file name: sum1ton.o> <Input C source file: sum1ton.c>
+spike pk <Name of the output file: sum1ton.o>
+
+```
+
+![1_risc_prgmoutput](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/f0240a75-f979-46b1-aa43-155acabd8fd5)
+
+
 </details>
 
 <details>
