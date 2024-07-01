@@ -1441,7 +1441,7 @@ Logic of BNE:
 ![5_](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/8e4e137c-4ec8-4d7b-a2ac-b9251af0800c)
 
 
- 10. SLL R15, R1, R2
+10. **```SLL R15, R1, R2```**
 
      The SLL instruction is stored in the memory location 32'h00208783.<br>
      The SLL stands for Shift left logic, which is used to shift the bits of a register value to the left by a specified number of positions. The vacated bits on the right are filled with zeros. This operation is also known as a logical left shift. The result is stored in a destination register.
