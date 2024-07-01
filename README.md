@@ -1303,7 +1303,10 @@ The output waveform of simulated RISC V for each instruction is given below
    Hexadecimal(-1) = FFFFFFFF<br>
    Hence the output of the ADD instruction is FFFFFFFF
 
-3. **```AND R8, R1, R3```**
+   ![3_sub](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5d2c5d22-4139-4700-9e59-1e8f26bc99c1)
+
+
+4. **```AND R8, R1, R3```**
    
    The AND instruction is stored in the memory location 32'h0230a400.<br>
    The AND instruction is used to perform a bitwise AND operation between two registers. The result is stored in a destination register.<br>
