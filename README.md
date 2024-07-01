@@ -1386,8 +1386,76 @@ Logic of SLT:
    
    ![3_ADDI](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/530db46c-ef8c-4150-88f4-dcbdf95d6719)
 
+8. **```BEQ R0, R0, 15```**
+   
+   The BEQ instruction is stored in the memory location 32'h00f00002.<br>
+   The BEQ stands for branch if equal, which is used to  compare two registers and branch to a specified address if the values in the registers are equal
+   <p align = "center">
+         BEQ Source register 1, Source register 2, offset value <br><br>
+   </p>
+
+If both the source registers are equal then an offset value is added to the program counter and is obtained as output.
+Logic of BEQ: 
+> if(R0 = R0){ <br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;program counter = program counter + Offset value }<br><br>
+
+   Value stored in the register ID_EX_A (R0) is R0 <br>
+   Value stored in the register ID_EX_B (R0) is R0 <br>
+   The offset value that is added to the program counter is 15 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R0 = R0 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> PC = PC + 15;<br>
+
+   Decimal(0B) + 15 = 25<br>
+   Hexadecimal(25) = 19<br>
+   Hence the output of the BEQ instruction is 00000019
+
+![4_BEQ](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/b4656ad8-29e0-4d0b-bf78-74a1d8cd0a98)
+
+9. **```BNE R0, R1, 20```**
+   
+   The BNE instruction is stored in the memory location 32'h01409002.<br>
+   The BNE stands for branch if not equal, which is used to  compare two registers and branch to a specified address if the values in the registers are not equal
+   <p align = "center">
+         BNE Source register 1, Source register 2, offset value <br><br>
+   </p>
+
+If both the source registers are not equal then an offset value is added to the program counter and is obtained as output.
+Logic of BNE: 
+> if(R0 != R0){ <br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;program counter = program counter + Offset value }<br><br>
+
+   Value stored in the register ID_EX_A is 02 <br>
+   Value stored in the register ID_EX_B is 02 <br>
+   The offset value that is added to the program counter is 20 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;02 = 02 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> PC != PC + 20;<br>
+   Since the values in the register are equal we can see that the program counter is not a sum of the old program counter and offset value.
+
+   Decimal(1B) + 20 = 47<br>
+   Hexadecimal(47) = 2F<br>
+   Hence we can observe that the output of the BNE instruction is 00000004 which is not equal to 2F.
+
+![5_](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/8e4e137c-4ec8-4d7b-a2ac-b9251af0800c)
 
 
+ 10. SLL R15, R1, R2
+
+     The SLL instruction is stored in the memory location 32'h00208783.<br>
+     The SLL stands for Shift left logic, which is used to shift the bits of a register value to the left by a specified number of positions. The vacated bits on the right are filled with zeros. This operation is also known as a logical left shift. The result is stored in a destination register.
+   <p align = "center">
+         BNE Destination register, Source register 1, Shift <br><br>
+   </p>
+   
+   Value stored in the register ID_EX_A is 1 <br>
+   Value stored in the register ID_EX_B is 2 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;binary(1) << 2 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0001 << 2 = 0100<br>
+   Hexadecimal(0100) = 00000004<br>
+   Hence the output of the SLL instruction is 00000004
+
+   ![6_sll](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/d496a894-f542-4940-a8af-e523a1e927d4)
+
+   
 </details>
 
 <details>
