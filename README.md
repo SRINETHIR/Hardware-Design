@@ -1254,11 +1254,45 @@ gtkwave <Name of vcd file: risc_v.vcd>
 ```
 ![1_risc_simulationCommands](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/15dea9e9-114a-47f1-b471-815b8f986c8a)
 
-Output waveform of simulated RISC V
+The memory address of each instruction is specified in the Verilog code of the RISC V and we can observe the output of the instructions in the respective memory locations.
 
-![2_risc_simulation](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/29d4a8a8-d795-47ee-a589-8073e2720eb9)
+![address](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/7c7c0275-92d4-4cc8-bfc0-910fb381651b)
 
-     z
+
+|  **Operation**  |  **Memory address**  |  
+|  :----:  |  :----:  |  
+|  ADD R6, R2, R1  |  32'h02208300  |  
+|  SUB R7, R1, R2  |  32'h02209380  |  
+|  AND R8, R1, R3  |  32'h0230a400  |  
+|  OR R9, R2, R5  |  32'h02513480  |  
+|  XOR R10, R1, R4  |  32'h0240c500  |  
+|  SLT R1, R2, R4  |  32'h02415580  |  
+|  ADDI R12, R4, 5  |  32'h00520600  |  
+|  BEQ R0, R0, 15  |  32'h00f00002  |  
+|  SW R3, R1, 2  |  32'h00209181  |  
+|  LW R13, R1, 2  |  32'h00208681  |  
+|  SRL R16, R14, R2  |  32'h00271803  |
+|  SLL R15, R1, R2  |  32'h00208783  |
+
+The output waveform of simulated RISC V for each instruction is given below
+
+1. **```ADD R6, R2, R1```**
+   
+   The ADD instruction is stored in the memory location 32'h02208300.<br>
+   The ADD instruction is used to perform integer addition. It adds the values of two source registers and stores the result in a destination register.<br>
+   <p align = "center"> R6 = R2 + R1 </p><br>
+   
+   Value stored in the register ID_EX_A is 1 <br>
+   Value stored in the register ID_EX_B is 2 <br><br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 + 2 = 3<br>
+   Hence the output of the ADD instruction is 00000003
+   
+
+   ![1_add](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/a1b4060b-aeac-433e-b2fc-5d21453b448c)
+
+
+
+
 </details>
 
 <details>
