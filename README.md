@@ -1280,16 +1280,111 @@ The output waveform of simulated RISC V for each instruction is given below
    
    The ADD instruction is stored in the memory location 32'h02208300.<br>
    The ADD instruction is used to perform integer addition. It adds the values of two source registers and stores the result in a destination register.<br>
-   <p align = "center"> R6 = R2 + R1 </p><br>
+   <p align = "center"> R6 = R2 + R1 </p>
    
    Value stored in the register ID_EX_A is 1 <br>
-   Value stored in the register ID_EX_B is 2 <br><br>
+   Value stored in the register ID_EX_B is 2 <br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 + 2 = 3<br>
+   Hexadecimal(3) = 00000003<br>
    Hence the output of the ADD instruction is 00000003
    
 
    ![1_add](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/a1b4060b-aeac-433e-b2fc-5d21453b448c)
 
+2. **```SUB R7, R1, R2```**
+   
+   The SUB instruction is stored in the memory location 32'h02209380.<br>
+   The SUB instruction is used to perform integer subtraction. It subtracts the values of two source registers and stores the result in a destination register.<br>
+   <p align = "center"> R7 = R2 - R1 </p>
+   
+   Value stored in the register ID_EX_A is 1 <br>
+   Value stored in the register ID_EX_B is 2 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 - 2 = -1<br>
+   Hexadecimal(-1) = FFFFFFFF<br>
+   Hence the output of the ADD instruction is FFFFFFFF
+
+3. **```AND R8, R1, R3```**
+   
+   The AND instruction is stored in the memory location 32'h0230a400.<br>
+   The AND instruction is used to perform a bitwise AND operation between two registers. The result is stored in a destination register.<br>
+   <p align = "center"> R8 = R3 & R1 </p>
+   
+   Value stored in the register ID_EX_A is 3 <br>
+   Value stored in the register ID_EX_B is 1 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;binary(3) & binary(1) <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0011 & 0001 = 0001<br>
+   Hexadecimal(0001) = 00000001<br>
+   Hence the output of the AND instruction is 00000001
+   
+
+  ![1_ADD](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/f54cb5ab-d5e5-4800-9179-49f18f249a04)
+
+4. **```OR R9, R2, R5```**
+   
+   The OR instruction is stored in the memory location 32'h02513480.<br>
+   The OR instruction is used to perform a bitwise OR operation between two registers. The result is stored in a destination register.<br>
+   <p align = "center"> R9 = R5 | R2 </p>
+   
+   Value stored in the register ID_EX_A is 2 <br>
+   Value stored in the register ID_EX_B is 5 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;binary(2) & binary(5) <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0010 & 0101 = 0111<br>
+   Hexadecimal(0111) = 00000007<br>
+   Hence the output of the OR instruction is 00000007
+
+   ![2_OR](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/4861d223-16ee-4d51-ba7f-4f68a1b65ddb)
+
+
+5. **```XOR R10, R1, R4```**
+   
+   The XOR instruction is stored in the memory location 32'h0240c500.<br>
+   The XOR instruction is used to perform a bitwise XOR operation between two registers. The result is stored in a destination register.<br>
+   <p align = "center"> R10 = R4 ^ R1 </p>
+   
+   Value stored in the register ID_EX_A is 1 <br>
+   Value stored in the register ID_EX_B is 4 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;binary(1) ^ binary(4) <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0001 & 0100 = 0101<br>
+   Hexadecimal(0101) = 00000005<br>
+   Hence the output of the XOR instruction is 00000005
+
+  ![1_XOR](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/b7ef59d0-306d-4dac-98af-6e58c90b88c5)
+
+6. **```SLT R1, R2, R4```**
+   
+   The SLT instruction is stored in the memory location 32'h02415580.<br>
+   The SLT instruction is used to compare two registers and set a destination register to 1 if the first source register is less than the second source register, otherwise it sets the destination register to 0.
+   <p align = "center">
+         R1 = SLT R4 R2 <br><br>
+   </p>
+Logic of SLT: 
+> if(R2 < R4){ <br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 }<br>
+> else{ <br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0 }<br><br>
+   
+   Value stored in the register ID_EX_A is 2 <br>
+   Value stored in the register ID_EX_B is 4 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 < 4 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 1<br>
+   Hexadecimal(1) = 00000001<br>
+   Hence the output of the SLT instruction is 00000001
+
+ ![2_SLT](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/2d09eff7-940c-4f2d-82eb-be060ffebda7)
+
+ 7. **```ADDI R12, R4, 5```**
+   
+   The ADDI instruction is stored in the memory location 32'h00520600.<br>
+   The ADDI instruction stands for add immediate which is used to perform integer addition between a register and an immediate (constant) value. The result is stored in a destination register.<br>
+   <p align = "center"> R12 = R4 + R5 </p>
+   
+   Value stored in the register ID_EX_A is 4 <br>
+   Value stored in the register ID_EX_B (Immediate Constant) is 5 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4 + 5 = 9<br>
+   Hexadecimal(9) = 00000009<br>
+   Hence the output of the ADDI instruction is 00000009
+   
+   ![3_ADDI](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/530db46c-ef8c-4150-88f4-dcbdf95d6719)
 
 
 
