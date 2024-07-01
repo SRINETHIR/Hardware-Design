@@ -1258,7 +1258,7 @@ Output waveform of simulated RISC V
 
 ![2_risc_simulation](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/29d4a8a8-d795-47ee-a589-8073e2720eb9)
 
-     
+     z
 </details>
 
 <details>
