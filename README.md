@@ -1,4 +1,4 @@
-# VSD - Hardware-Development Peogram
+# VSD - Hardware-Development Program
 The progress made in the VSD-Hardware Development Program :
 <details>
      <summary>
@@ -1142,7 +1142,7 @@ riscv64-unknown-elf-objdump -d <Output file name: sum1ton.o> | less
 ```
 The number of instructions that are present in the main function with O1 optimization:
 
-(101bc-10184)/4 = E
+(101bc-10184)/4 = E<br>
 Decimal (E) = 14
 
 14 instructions of the main function
@@ -1164,7 +1164,7 @@ riscv64-unknown-elf-objdump -d <Output file name: sum1ton.o> | less
 Assembly language for reduced instruction set with increased speed.<br>
 The number of instructions that are present in the main function with Ofast optimization:
 
-(100dc-100b0)/4 = B
+(100dc-100b0)/4 = B<br>
 Decimal (B) = 11<br>
 11 instructions of the main function
 
