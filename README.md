@@ -1389,30 +1389,24 @@ Logic of SLT:
    
    ![3_ADDI](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/530db46c-ef8c-4150-88f4-dcbdf95d6719)
 
-8. **```BEQ R0, R0, 15```**
+8. **```SW R3, R1, 2```**
    
-   The BEQ instruction is stored in the memory location 32'h00f00002.<br>
-   The BEQ stands for branch if equal, which is used to  compare two registers and branch to a specified address if the values in the registers are equal
+   The SW instruction is stored in the memory location 32'h00209181.<br>
+   The SW stands for store word, which is used for saving data from registers to memory, such as in stack operations, saving variables, and storing results of computations.
    <p align = "center">
-         BEQ Source register 1, Source register 2, offset value <br><br>
+         SW source register 2, Source register 1, offset value <br><br>
    </p>
 
-If both the source registers are equal then an offset value is added to the program counter and is obtained as output.
-Logic of BEQ: 
-> if(R0 = R0){ <br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;program counter = program counter + Offset value }<br><br>
+The offset value is added to the address of the source register 1. The value in the source register 2 is stored in the new address obtained after adding the offset value.
+Logic of SW: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Memory[Souce register 1 + offset] = Souce register 2<br><br>
 
-   Value stored in the register ID_EX_A (R0) is R0 <br>
-   Value stored in the register ID_EX_B (R0) is R0 <br>
-   The offset value that is added to the program counter is 15 <br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R0 = R0 <br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> PC = PC + 15;<br>
-
-   Decimal(0B) + 15 = 25<br>
-   Hexadecimal(25) = 19<br>
-   Hence the output of the BEQ instruction is 00000019
-
-![4_BEQ](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/b4656ad8-29e0-4d0b-bf78-74a1d8cd0a98)
+   Value stored in the register ID_EX_A is 1 <br>
+   Value stored in the register ID_EX_B is 2 <br>
+   The offset value that is added to the program counter is 2 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Memory[1+2] = 2br>
+   
+![8_sw](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/ec45dff7-ee89-4f49-9750-657b2578fd06)
 
 9. **```BNE R0, R1, 20```**
    
@@ -1441,22 +1435,31 @@ Logic of BNE:
 ![5_](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/8e4e137c-4ec8-4d7b-a2ac-b9251af0800c)
 
 
-10. **```SLL R15, R1, R2```**
-
-     The SLL instruction is stored in the memory location 32'h00208783.<br>
-     The SLL stands for Shift left logic, which is used to shift the bits of a register value to the left by a specified number of positions. The vacated bits on the right are filled with zeros. This operation is also known as a logical left shift. The result is stored in a destination register.
-   <p align = "center">
-         BNE Destination register, Source register 1, Shift <br><br>
-   </p>
+10. **```BEQ R0, R0, 15```**
    
-   Value stored in the register ID_EX_A is 1 <br>
-   Value stored in the register ID_EX_B is 2 <br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;binary(1) << 2 <br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0001 << 2 = 0100<br>
-   Hexadecimal(0100) = 00000004<br>
-   Hence the output of the SLL instruction is 00000004
+   The BEQ instruction is stored in the memory location 32'h00f00002.<br>
+   The BEQ stands for branch if equal, which is used to  compare two registers and branch to a specified address if the values in the registers are equal
+   <p align = "center">
+         BEQ Source register 1, Source register 2, offset value <br><br>
+   </p>
 
-   ![6_sll](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/d496a894-f542-4940-a8af-e523a1e927d4)
+If both the source registers are equal then an offset value is added to the program counter and is obtained as output.
+Logic of BEQ: 
+> if(R0 = R0){ <br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;program counter = program counter + Offset value }<br><br>
+
+   Value stored in the register ID_EX_A (R0) is R0 <br>
+   Value stored in the register ID_EX_B (R0) is R0 <br>
+   The offset value that is added to the program counter is 15 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;R0 = R0 <br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> PC = PC + 15;<br>
+
+   Decimal(0B) + 15 = 25<br>
+   Hexadecimal(25) = 19<br>
+   Hence the output of the BEQ instruction is 00000019
+
+![10_BEQ](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/57b6d6f8-fa1b-435d-859d-27fc9fe39c00)
+
 
    
 </details>
@@ -1528,17 +1531,17 @@ The output waveform of Gate level simulated (GLS) RISC V for each instruction
 
 ![7_addi](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5eca2325-6247-4bb8-b228-beb5023eb1af)
 
-8.  **```BEQ R0, R0, 15```**
+8.  **```SW R3, R1, 2```**
 
-![8_beq](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/b8dbb1ec-43b5-40e4-88ad-24cf5547d38f)
+![SW](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/65f24ab9-8a1b-444b-8352-b0db5e26e211)
 
 9.  **```BNE R0, R1, 20```**
 
 ![9_bne](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/9a1d650e-b8dd-4841-bf9d-6e87183e1e76)
 
-10.  **```SLL R15, R1, R2```**
+10.  **```BEQ R0, R0, 15```**
 
-![10_sll](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/1ece12ff-c78d-4404-bd38-3bd5f2738ef3)
+![8_beq](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/b8dbb1ec-43b5-40e4-88ad-24cf5547d38f)
 
 
 We can observe from the waveforms that the output of the Simulated waveform and GLS output waveform match and there is no mismatch in the output.
