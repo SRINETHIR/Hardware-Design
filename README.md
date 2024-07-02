@@ -1540,6 +1540,9 @@ The output waveform of Gate level simulated (GLS) RISC V for each instruction
 
 ![10_sll](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/1ece12ff-c78d-4404-bd38-3bd5f2738ef3)
 
+
+We can observe from the waveforms that the output of the Simulated waveform and GLS output waveform match and there is no mismatch in the output.
+
 </details>
 
 </details>
