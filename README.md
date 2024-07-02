@@ -1276,6 +1276,8 @@ The memory address of each instruction is specified in the Verilog code of the R
 
 The output waveform of simulated RISC V for each instruction is given below
 
+----------------------------------------------------------------------------------------------------------------
+
 1. **```ADD R6, R2, R1```**
    
    The ADD instruction is stored in the memory location 32'h02208300.<br>
@@ -1474,6 +1476,8 @@ Logic of BEQ:
    Hence the output of the BEQ instruction is 00000019
 
 ![10_BEQ](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/57b6d6f8-fa1b-435d-859d-27fc9fe39c00)
+
+----------------------------------------------------------------------------------------------------------------
 
 </details>
 
