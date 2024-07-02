@@ -1498,11 +1498,48 @@ gtkwave risc_v.vdc
 
 ![3_risc_GLSsimulationCommands](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/7a0392dc-28b5-4819-87bc-9396fa3b1939)
 
-The output waveform of Gate level simulated(GLS) RISC V
+The output waveform of Gate level simulated (GLS) RISC V for each instruction
 
-![4_risc_GLSsimulation](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/108fbddc-d72f-4e51-a382-f729af8c56a2)
+1. **```ADD R6, R2, R1```**
 
-     
+![1_add](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/9f31f98e-cc98-4a36-9cf0-14caf6aa1088)
+
+2.  **```SUB R7, R1, R2```**
+
+![2_sub](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/c6a36537-fc71-457a-8ea8-0be8f142ab4f)
+
+3.  **```AND R8, R1, R3```**
+
+![3_and](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/7027b284-7dbc-4f73-82fa-8f5faf46f2a3)
+
+4.  **```OR R9, R2, R5```**
+
+![4_or](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/9ca618a4-1d72-4fda-8c19-c1d2b13c6eca)
+
+5.  **```XOR R10, R1, R4```**
+
+![5_xor](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/bbd1d802-3d43-4ad5-9f68-ddebb7467013)
+
+6.  **```SLT R1, R2, R4```**
+
+![6_slt](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/38e891bf-be58-40d6-8ad0-260aece889d1)
+
+7.  **```ADDI R12, R4, 5```**
+
+![7_addi](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5eca2325-6247-4bb8-b228-beb5023eb1af)
+
+8.  **```BEQ R0, R0, 15```**
+
+![8_beq](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/b8dbb1ec-43b5-40e4-88ad-24cf5547d38f)
+
+9.  **```BNE R0, R1, 20```**
+
+![9_bne](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/9a1d650e-b8dd-4841-bf9d-6e87183e1e76)
+
+10.  **```SLL R15, R1, R2```**
+
+![10_sll](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/1ece12ff-c78d-4404-bd38-3bd5f2738ef3)
+
 </details>
 
 </details>
