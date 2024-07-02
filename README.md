@@ -1291,6 +1291,8 @@ The output waveform of simulated RISC V for each instruction is given below
 
    ![1_add](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/a1b4060b-aeac-433e-b2fc-5d21453b448c)
 
+----------------------------------------------------------------------------------------------------------------
+
 2. **```SUB R7, R1, R2```**
    
    The SUB instruction is stored in the memory location 32'h02209380.<br>
@@ -1305,8 +1307,9 @@ The output waveform of simulated RISC V for each instruction is given below
 
    ![3_sub](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5d2c5d22-4139-4700-9e59-1e8f26bc99c1)
 
+----------------------------------------------------------------------------------------------------------------
 
-4. **```AND R8, R1, R3```**
+3. **```AND R8, R1, R3```**
    
    The AND instruction is stored in the memory location 32'h0230a400.<br>
    The AND instruction is used to perform a bitwise AND operation between two registers. The result is stored in a destination register.<br>
@@ -1321,6 +1324,8 @@ The output waveform of simulated RISC V for each instruction is given below
    
 
   ![1_ADD](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/f54cb5ab-d5e5-4800-9179-49f18f249a04)
+
+----------------------------------------------------------------------------------------------------------------
 
 4. **```OR R9, R2, R5```**
    
@@ -1337,6 +1342,7 @@ The output waveform of simulated RISC V for each instruction is given below
 
    ![2_OR](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/4861d223-16ee-4d51-ba7f-4f68a1b65ddb)
 
+----------------------------------------------------------------------------------------------------------------
 
 5. **```XOR R10, R1, R4```**
    
@@ -1352,6 +1358,8 @@ The output waveform of simulated RISC V for each instruction is given below
    Hence the output of the XOR instruction is 00000005
 
   ![1_XOR](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/b7ef59d0-306d-4dac-98af-6e58c90b88c5)
+
+----------------------------------------------------------------------------------------------------------------
 
 6. **```SLT R1, R2, R4```**
    
@@ -1375,6 +1383,8 @@ Logic of SLT:
 
  ![2_SLT](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/2d09eff7-940c-4f2d-82eb-be060ffebda7)
 
+----------------------------------------------------------------------------------------------------------------
+
  7. **```ADDI R12, R4, 5```**
    
    The ADDI instruction is stored in the memory location 32'h00520600.<br>
@@ -1388,6 +1398,8 @@ Logic of SLT:
    Hence the output of the ADDI instruction is 00000009
    
    ![3_ADDI](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/530db46c-ef8c-4150-88f4-dcbdf95d6719)
+
+----------------------------------------------------------------------------------------------------------------
 
 8. **```SW R3, R1, 2```**
    
@@ -1407,6 +1419,8 @@ Logic of SW: <br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Memory[1+2] = 2br>
    
 ![8_sw](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/ec45dff7-ee89-4f49-9750-657b2578fd06)
+
+----------------------------------------------------------------------------------------------------------------
 
 9. **```BNE R0, R1, 20```**
    
@@ -1434,6 +1448,7 @@ Logic of BNE:
 
 ![5_](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/8e4e137c-4ec8-4d7b-a2ac-b9251af0800c)
 
+----------------------------------------------------------------------------------------------------------------
 
 10. **```BEQ R0, R0, 15```**
    
@@ -1460,8 +1475,6 @@ Logic of BEQ:
 
 ![10_BEQ](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/57b6d6f8-fa1b-435d-859d-27fc9fe39c00)
 
-
-   
 </details>
 
 <details>
@@ -1544,7 +1557,7 @@ The output waveform of Gate level simulated (GLS) RISC V for each instruction
 ![8_beq](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/b8dbb1ec-43b5-40e4-88ad-24cf5547d38f)
 
 
-We can observe from the waveforms that the output of the Simulated waveform and GLS output waveform match and there is no mismatch in the output.
+We can observe from the waveforms that the output of the Simulated waveform and GLS output waveform match and there is no mismatch.
 
 </details>
 
