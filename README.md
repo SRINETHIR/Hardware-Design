@@ -1259,7 +1259,7 @@ The memory address of each instruction is specified in the Verilog code of the R
 ![address](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/7c7c0275-92d4-4cc8-bfc0-910fb381651b)
 
 
-|  **Operation**  |  **Memory address**  |  
+|  **Operation**  |  **Hardcoded ISA**  |  
 |  :----:  |  :----:  |  
 |  ADD R6, R2, R1  |  32'h02208300  |  
 |  SUB R7, R1, R2  |  32'h02209380  |  
