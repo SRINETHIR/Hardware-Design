@@ -1522,43 +1522,43 @@ The output waveform of Gate level simulated (GLS) RISC V for each instruction
 
 1. **```ADD R6, R2, R1```**
 
-![1_add](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/9f31f98e-cc98-4a36-9cf0-14caf6aa1088)
+![1_ADD](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/15d46340-0636-4b87-ad4a-7b1d6be763c2)
 
 2.  **```SUB R7, R1, R2```**
 
-![2_sub](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/c6a36537-fc71-457a-8ea8-0be8f142ab4f)
+![2_SUB](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/441030a9-6777-470f-b356-73af5265d3a0)
 
 3.  **```AND R8, R1, R3```**
 
-![3_and](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/7027b284-7dbc-4f73-82fa-8f5faf46f2a3)
+![3_AND](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/40435d58-ebe8-4c56-ab71-7338db2f1fde)
 
 4.  **```OR R9, R2, R5```**
 
-![4_or](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/9ca618a4-1d72-4fda-8c19-c1d2b13c6eca)
+![4_OR](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/78887d9a-3953-4833-b566-c8da703a78bd)
 
 5.  **```XOR R10, R1, R4```**
 
-![5_xor](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/bbd1d802-3d43-4ad5-9f68-ddebb7467013)
+![5_XOR](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/70bcfb84-e44d-425f-9390-b57b4c2b77c5)
 
 6.  **```SLT R1, R2, R4```**
 
-![6_slt](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/38e891bf-be58-40d6-8ad0-260aece889d1)
+![6_SLT](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/c05fc625-3532-4a2e-b166-63a391aec345)
 
 7.  **```ADDI R12, R4, 5```**
 
-![7_addi](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5eca2325-6247-4bb8-b228-beb5023eb1af)
+![7_ADDI](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/1e06ba84-0886-4724-b14f-e47799660fc6)
 
 8.  **```SW R3, R1, 2```**
 
-![SW](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/65f24ab9-8a1b-444b-8352-b0db5e26e211)
+![8_SW](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/afead7ca-c409-4fda-8633-5f86cd4752d6)
 
-9.  **```BNE R0, R1, 20```**
+9. **```LW R13,R1,2```***
 
-![9_bne](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/9a1d650e-b8dd-4841-bf9d-6e87183e1e76)
+![9_LW](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/32301c9a-3036-43aa-8efa-8fc46c65bbc8)
 
 10.  **```BEQ R0, R0, 15```**
 
-![8_beq](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/b8dbb1ec-43b5-40e4-88ad-24cf5547d38f)
+![10_BEQ](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5acf01c8-1deb-4dc4-a2cf-fa98a4affc58)
 
 
 We can observe from the waveforms that the output of the Simulated waveform and GLS output waveform match and there is no mismatch.
