@@ -1290,8 +1290,7 @@ The output waveform of simulated RISC V for each instruction is given below
    Hexadecimal(3) = 00000003<br>
    Hence the output of the ADD instruction is 00000003
    
-
-   ![1_add](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/a1b4060b-aeac-433e-b2fc-5d21453b448c)
+![1_ADD](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/4ff036f3-fe67-43ef-aba8-28a22a372c72)
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -1307,7 +1306,7 @@ The output waveform of simulated RISC V for each instruction is given below
    Hexadecimal(-1) = FFFFFFFF<br>
    Hence the output of the ADD instruction is FFFFFFFF
 
-   ![3_sub](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5d2c5d22-4139-4700-9e59-1e8f26bc99c1)
+![2_SUB](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/7331c0bc-a287-4e24-ba0a-4ab6a0deb850)
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -1325,7 +1324,7 @@ The output waveform of simulated RISC V for each instruction is given below
    Hence the output of the AND instruction is 00000001
    
 
-  ![1_ADD](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/f54cb5ab-d5e5-4800-9179-49f18f249a04)
+ ![3_AND](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/f96b3e51-0c17-4a41-b93b-ac68d5e7200d)
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -1342,7 +1341,7 @@ The output waveform of simulated RISC V for each instruction is given below
    Hexadecimal(0111) = 00000007<br>
    Hence the output of the OR instruction is 00000007
 
-   ![2_OR](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/4861d223-16ee-4d51-ba7f-4f68a1b65ddb)
+  ![4_OR](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/a5015274-9b63-4aff-8dc7-fd38d326d820)
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -1359,7 +1358,7 @@ The output waveform of simulated RISC V for each instruction is given below
    Hexadecimal(0101) = 00000005<br>
    Hence the output of the XOR instruction is 00000005
 
-  ![1_XOR](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/b7ef59d0-306d-4dac-98af-6e58c90b88c5)
+  ![5_XOR](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/aa88adfc-49cc-4ae8-bbbb-bcf37baff901)
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -1383,7 +1382,7 @@ Logic of SLT:
    Hexadecimal(1) = 00000001<br>
    Hence the output of the SLT instruction is 00000001
 
- ![2_SLT](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/2d09eff7-940c-4f2d-82eb-be060ffebda7)
+![6_SLT](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/f0544c91-b750-4030-99ad-def3f07de63a)
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -1399,60 +1398,11 @@ Logic of SLT:
    Hexadecimal(9) = 00000009<br>
    Hence the output of the ADDI instruction is 00000009
    
-   ![3_ADDI](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/530db46c-ef8c-4150-88f4-dcbdf95d6719)
+ ![7_ADDI](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/2c2899e4-2934-4d53-b298-b755b29c5886)
 
 ----------------------------------------------------------------------------------------------------------------
 
-8. **```SW R3, R1, 2```**
-   
-   The SW instruction is stored in the memory location 32'h00209181.<br>
-   The SW stands for store word, which is used for saving data from registers to memory, such as in stack operations, saving variables, and storing results of computations.
-   <p align = "center">
-         SW source register 2, Source register 1, offset value <br><br>
-   </p>
-
-The offset value is added to the address of the source register 1. The value in the source register 2 is stored in the new address obtained after adding the offset value.
-Logic of SW: <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Memory[Souce register 1 + offset] = Souce register 2<br><br>
-
-   Value stored in the register ID_EX_A is 1 <br>
-   Value stored in the register ID_EX_B is 2 <br>
-   The offset value that is added to the program counter is 2 <br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Memory[1+2] = 2br>
-   
-![8_sw](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/ec45dff7-ee89-4f49-9750-657b2578fd06)
-
-----------------------------------------------------------------------------------------------------------------
-
-9. **```BNE R0, R1, 20```**
-   
-   The BNE instruction is stored in the memory location 32'h01409002.<br>
-   The BNE stands for branch if not equal, which is used to  compare two registers and branch to a specified address if the values in the registers are not equal
-   <p align = "center">
-         BNE Source register 1, Source register 2, offset value <br><br>
-   </p>
-
-If both the source registers are not equal then an offset value is added to the program counter and is obtained as output.
-Logic of BNE: 
-> if(R0 != R0){ <br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;program counter = program counter + Offset value }<br><br>
-
-   Value stored in the register ID_EX_A is 02 <br>
-   Value stored in the register ID_EX_B is 02 <br>
-   The offset value that is added to the program counter is 20 <br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;02 = 02 <br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=> PC != PC + 20;<br>
-   Since the values in the register are equal we can see that the program counter is not a sum of the old program counter and offset value.
-
-   Decimal(1B) + 20 = 47<br>
-   Hexadecimal(47) = 2F<br>
-   Hence we can observe that the output of the BNE instruction is 00000004 which is not equal to 2F.
-
-![5_](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/8e4e137c-4ec8-4d7b-a2ac-b9251af0800c)
-
-----------------------------------------------------------------------------------------------------------------
-
-10. **```BEQ R0, R0, 15```**
+8. **```BEQ R0, R0, 15```**
    
    The BEQ instruction is stored in the memory location 32'h00f00002.<br>
    The BEQ stands for branch if equal, which is used to  compare two registers and branch to a specified address if the values in the registers are equal
@@ -1475,7 +1425,7 @@ Logic of BEQ:
    Hexadecimal(25) = 19<br>
    Hence the output of the BEQ instruction is 00000019
 
-![10_BEQ](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/57b6d6f8-fa1b-435d-859d-27fc9fe39c00)
+![10_BEQ](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/cc5e3721-31cf-4489-b9e2-a7fbd008ac15)
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -1522,43 +1472,35 @@ The output waveform of Gate level simulated (GLS) RISC V for each instruction
 
 1. **```ADD R6, R2, R1```**
 
-![1_ADD](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/15d46340-0636-4b87-ad4a-7b1d6be763c2)
+![1_ADD](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/4b1e4cf3-4864-4f3a-b977-a8e58c1de7e8)
 
 2.  **```SUB R7, R1, R2```**
 
-![2_SUB](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/441030a9-6777-470f-b356-73af5265d3a0)
+![2_SUB](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/0f27ad05-8694-472d-b966-02f039eadd14)
 
 3.  **```AND R8, R1, R3```**
 
-![3_AND](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/40435d58-ebe8-4c56-ab71-7338db2f1fde)
+![3_AND](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/08a46470-9312-4685-ac27-55323511c51d)
 
 4.  **```OR R9, R2, R5```**
 
-![4_OR](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/78887d9a-3953-4833-b566-c8da703a78bd)
+![4_OR](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/73468b98-77fb-43f8-8178-b31b62f26492)
 
 5.  **```XOR R10, R1, R4```**
 
-![5_XOR](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/70bcfb84-e44d-425f-9390-b57b4c2b77c5)
+![5_XOR](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/32b5daf0-4bfc-45ac-ba1a-643e7d86061b)
 
 6.  **```SLT R1, R2, R4```**
 
-![6_SLT](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/c05fc625-3532-4a2e-b166-63a391aec345)
+![6_SLT](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/40ca092a-6045-42ae-978d-0c9819b858ef)
 
 7.  **```ADDI R12, R4, 5```**
 
-![7_ADDI](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/1e06ba84-0886-4724-b14f-e47799660fc6)
+![7_ADDI](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/ff46d001-79a6-46c7-9ce4-97023e9b3624)
 
-8.  **```SW R3, R1, 2```**
+8.  **```BEQ R0, R0, 15```**
 
-![8_SW](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/afead7ca-c409-4fda-8633-5f86cd4752d6)
-
-9. **```LW R13,R1,2```***
-
-![9_LW](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/32301c9a-3036-43aa-8efa-8fc46c65bbc8)
-
-10.  **```BEQ R0, R0, 15```**
-
-![10_BEQ](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/5acf01c8-1deb-4dc4-a2cf-fa98a4affc58)
+![10_BEQ](https://github.com/SRINETHIR/Hardware-Design/assets/141196086/cd2d229e-732d-4716-9cca-0e456418a459)
 
 
 We can observe from the waveforms that the output of the Simulated waveform and GLS output waveform match and there is no mismatch.
