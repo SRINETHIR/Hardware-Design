@@ -1509,9 +1509,38 @@ We can observe from the waveforms that the output of the Simulated waveform and 
 
 </details>
 
+
 <details>
      <summary>
-          <h2 id = 'Week 3'>Week 3</h2>
+          <h2 id = 'Week 4'>Week 4</h2>
      </summary>
+     <h3>Installing OpenSTA</h3>
+
+     git clone https://github.com/parallaxsw/OpenSTA.git
+     cd OpenSTA
+     mkdir build
+     cd build
+     cmake ..
+     make
+
+sta for static timing analysis
+
+![1](https://github.com/user-attachments/assets/4c5e36fb-ac44-4e14-bf4e-345d2a059a3c)
+
+Tcl file configuration to perform the static timing analysis
+
+![tcl](https://github.com/user-attachments/assets/6865e26e-6dbf-44a2-a3b8-13370bc6c748)
+
+STA for fast library
+
+STA for slow library
+
+STA for typical library
+
+
+
+
+
+
 </details>
 
