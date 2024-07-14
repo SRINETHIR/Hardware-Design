@@ -1508,5 +1508,10 @@ We can observe from the waveforms that the output of the Simulated waveform and 
 </details>
 
 </details>
-     
+
+<details>
+     <summary>
+          <h2 id = 'Week 3'>Week 3</h2>
+     </summary>
+</details>
 
