@@ -1533,9 +1533,25 @@ Tcl file configuration to perform the static timing analysis
 
 STA for fast library
 
+![4_sta_ff](https://github.com/user-attachments/assets/1d132e74-84b9-4558-98ee-38c7e03e8ea6)
+
 STA for slow library
 
+![5_sta_ss](https://github.com/user-attachments/assets/329a0db9-58ae-486c-b97b-b7918fa600f5)
+![6_sta_ss_2](https://github.com/user-attachments/assets/53e7dd10-6154-4854-abcb-43174c601ba8)
+
 STA for typical library
+
+![7_sta_tt_1](https://github.com/user-attachments/assets/864ab847-29f1-4f49-bbda-84b7935a9859)
+![8_sta_tt_2](https://github.com/user-attachments/assets/efc2e84f-fb1a-47e4-bb66-bd56dce1d13b)
+
+TNS
+
+![8_TNS](https://github.com/user-attachments/assets/da29767a-60dc-4a1f-9dd7-7fb26a533e45)
+
+WNS
+![9_WNS](https://github.com/user-attachments/assets/122a1782-4572-4c1a-a916-969bfbf4b4ec)
+
 
 
 
