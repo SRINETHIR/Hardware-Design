@@ -1,0 +1,85 @@
+###############################################################################
+# Created by write_sdc
+# Sat Jul 27 13:04:42 2024
+###############################################################################
+current_design risc_v
+###############################################################################
+# Timing Constraints
+###############################################################################
+create_clock -name clk -period 10.0000 [get_ports {clk}]
+set_clock_uncertainty -setup 0.5000 clk
+set_clock_uncertainty -hold 0.2000 clk
+set_clock_latency -source -min 1.0000 [get_clocks {clk}]
+set_clock_latency -source -max 4.0000 [get_clocks {clk}]
+set_input_delay 0.5000 -clock [get_clocks {clk}] -add_delay [get_ports {RN}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[0]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[0]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[10]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[10]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[11]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[11]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[12]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[12]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[13]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[13]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[14]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[14]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[15]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[15]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[16]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[16]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[17]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[17]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[18]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[18]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[19]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[19]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[1]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[1]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[20]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[20]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[21]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[21]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[22]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[22]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[23]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[23]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[24]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[24]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[25]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[25]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[26]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[26]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[27]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[27]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[28]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[28]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[29]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[29]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[2]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[2]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[30]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[30]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[31]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[31]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[3]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[3]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[4]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[4]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[5]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[5]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[6]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[6]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[7]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[7]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[8]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[8]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -rise -min -add_delay [get_ports {WB_OUT[9]}]
+set_output_delay 0.5000 -clock [get_clocks {clk}] -fall -min -add_delay [get_ports {WB_OUT[9]}]
+###############################################################################
+# Environment
+###############################################################################
+set_input_transition 0.2000 [get_ports {RN}]
+###############################################################################
+# Design Rules
+###############################################################################
