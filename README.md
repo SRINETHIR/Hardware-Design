@@ -1590,15 +1590,71 @@ SDC exported
      </summary>
 
 A chip design contains various components inside the chip. A few of those components are listed below:
-<ol>
-     <li>PADS: Pads are used to send the signals inside the chip. Signals move from inside to outside or outside to inside through these pads.</li>
-     <li>CORE: All the digital logic of the chip is present inside the core of the chip (like OR gate, AND gate, etc.)</li>
-     <li>DIE: Die is the sides of the entire chip which surrounds the core of the chip.</li>
-     <li>FOUNDARY IPs: The blocks which are present in the core of the chip like ADC, DAC, SRAM, etc are the boundary IPs. The performance of the electronic devices depends on the boundary IPs.</li>
-     <li>MACROS: Macros are mostly purely digital logic. But when compared to macros, foundry IPs require some amount of intelligence to continue.</li>
- 
-</ol>
 
+1.  **```PADS```** - Pads are used to send the signals inside the chip. Signals move from inside to outside or outside to inside through these pads.<br>
+2.  **```CORE```** - All the digital logic of the chip is present inside the core of the chip (like OR gate, AND gate, etc.)<br>
+3.  **```DIE```** - Die is the sides of the entire chip that surrounds the core of the chip.<br>
+4.  **```FOUNDARY IPs```** - The blocks which are present in the core of the chip like ADC, DAC, SRAM, etc are the boundary IPs. The performance of the electronic devices depends on the boundary IPs.<br>
+5.  **```MACROS```** - Macros are mostly purely digital logic. But when compared to macros, foundry IPs require some amount of intelligence to continue.<br>
+
+RISC V instruction set architecture (ISA)
+Software applications are composed of small functions that are compiled and executed. These functions are translated into hardware-specific instructions by a compiler, which is then converted into binary machine language using an assembler. The compiler's instructions serve as an intermediate layer between the C language and binary language. To implement these instructions and produce binary output, an RTL (Register Transfer Level) description language is used. The netlist, synthesized from the RTL, is then converted into hardware through physical design implementation.
+
+<h2>ASIC flow - Application-specific integrated circuits flow</h2>
+Major elements that are required to design ASIC are:
+<ul>
+     <li>Hardware description language</li>
+     <li>EDA tools</li>
+     <li>PDKs-Process design kits</li>
+</ul>
+The OpenLane Architecture and the OpenLane flow stages are depicted below:
+<br>
+
+![1](https://github.com/user-attachments/assets/3c5da553-29dd-4e27-86b6-58952d9fd3ee) 
+
+
+The simplified flow from RTL to GDSII is as given below:
+<br>
+![2](https://github.com/user-attachments/assets/45c22368-97be-4c00-af2c-6b9553635232)
+<br><br>
+
+The different stages of OpenLane flow are explained in detail below:
+
+<details>
+     <summary>
+          <h4 id = 'Synthesis'>Synthesis</h4>
+     </summary>
+</details>
+<details>
+     <summary>
+          <h4 id = 'Floor and power planning'>Floor and power planning</h4>
+     </summary>
+</details>
+<details>
+     <summary>
+          <h4 id = 'Placement'>Placement</h4>
+     </summary>
+</details>
+<details>
+     <summary>
+          <h4 id = 'CTS - Clock tree Synthesis'>CTS - Clock tree Synthesis</h4>
+     </summary>
+</details>
+<details>
+     <summary>
+          <h4 id = 'Placement'>Placement</h4>
+     </summary>
+</details>
+<details>
+     <summary>
+          <h4 id = 'Routing'>Routing</h4>
+     </summary>
+</details>
+<details>
+     <summary>
+          <h4 id = 'Sign off'>Sign Off</h4>
+     </summary>
+</details>
 
 
 </details>
