@@ -1582,6 +1582,24 @@ SDC exported
 
 ![b_export_sdc2](https://github.com/user-attachments/assets/0fcc6129-5c5d-44c3-9d53-4a4597bbf0c9)
 
+</details>
+
+<details>
+     <summary>
+          <h2 id = 'Week 6'>Week 6</h2>
+     </summary>
+
+A chip design contains various components inside the chip. A few of those components are listed below:
+<ol>
+     <li>PADS: Pads are used to send the signals inside the chip. Signals move from inside to outside or outside to inside through these pads.</li>
+     <li>CORE: All the digital logic of the chip is present inside the core of the chip (like OR gate, AND gate, etc.)</li>
+     <li>DIE: Die is the sides of the entire chip which surrounds the core of the chip.</li>
+     <li>FOUNDARY IPs: The blocks which are present in the core of the chip like ADC, DAC, SRAM, etc are the boundary IPs. The performance of the electronic devices depends on the boundary IPs.</li>
+     <li>MACROS: Macros are mostly purely digital logic. But when compared to macros, foundry IPs require some amount of intelligence to continue.</li>
+ 
+</ol>
+
+
 
 </details>
 
