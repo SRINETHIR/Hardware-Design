@@ -1598,7 +1598,7 @@ A chip design contains various components inside the chip. A few of those compon
 5.  **```MACROS```** - Macros are mostly purely digital logic. But when compared to macros, foundry IPs require some amount of intelligence to continue.<br>
 
 <h3>RISC V instruction set architecture (ISA)</h3>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Software applications are composed of small functions that are compiled and executed. These functions are translated into hardware-specific instructions by a compiler, which is then converted into binary machine language using an assembler. The compiler's instructions serve as an intermediate layer between the C language and binary language. To implement these instructions and produce binary output, an RTL (Register Transfer Level) description language is used. The netlist, synthesized from the RTL, is then converted into hardware through physical design implementation.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Software applications are composed of small functions that are compiled and executed. These functions are translated into hardware-specific instructions by a compiler, which is then converted into binary machine language using an assembler. The compiler's instructions serve as an intermediate layer between the C language and binary language. To implement these instructions and produce binary output, an RTL (Register Transfer Level) description language is used. The netlist, synthesized from the RTL, is then converted into hardware through physical design implementation.
 
 <h2>ASIC flow - Application-specific integrated circuits flow</h2>
 Major elements that are required to design ASIC are:
@@ -1623,26 +1623,26 @@ The simplified flow from RTL to GDSII is as given below:
           <h4 id = 'Design preparation Setup'>Design preparation Setup</h4>
      </summary>
 
-The below set of code is used for the basic design preparartion setup of OpenLane
+The below set of code is used for the basic design preparation setup of OpenLane
 
 ```
 docker
 ./flow.tcl -interactive
 package require openlane 0.9
 ```
-**```Docker```** - This command which is used to provide a suitable environment for the OpenLane flow to run.<br><br>
-**```./flow.tcl -interactive```** - This command runs the flow.tcl script in interactive mode. The -interactive flag likely indicates that the script will require user input or will run in a mode where the user can interact with it in real-time.<br><br>
+**```Docker```** - This command is used to provide a suitable environment for the OpenLane flow to run.<br><br>
+**```./flow.tcl -interactive```** - This command runs the flow.tcl script in interactive mode. The -interactive flag likely indicates that the script will require user input or will run in a mode where the user can interact with it in real time.<br><br>
 **```package require openlane 0.9```** - This command inputs and loads all the OpenLnae packages of version 0.9 which are required.<br><br><br>
 
 ![3](https://github.com/user-attachments/assets/3fb6a977-c397-4085-9611-d509fe26d73e)
 
- The design that we need to run the OpenLane flow is kept in designs folder inside the oprnlane folder. Each design is present as a folder which has the src folder, config file and skywater130 nm pdk(process design kit). Inside the src folder it contains the verilog design file and the sdc constraints used for timing analysis.<br>
+ The design that we need to run the OpenLane flow is kept in the designs folder inside the OpenLane folder. Each design is present as a folder which has the src folder, config file, and skywater130 nm pdk(process design kit). Inside the src folder it contains the Verilog design file and the sdc constraints used for timing analysis.<br>
 
  ```
 prep -design <Design folder name>
  ```
-The above command is used in setting up necessary files and configurations for the design process. Creates a specific location from where the flow fetches the file and also it merges the lef files and the tlef files.<br>
-Once the preparation is complete a run folder is created which has a folder with the date of creation. The config.tcl file inside the run folder make sure that it shows the default parameters.
+The above command sets up the necessary files and configurations for the design process. It creates a specific location from where the flow fetches the file and merges the lef files and the tlef files.<br>
+Once the preparation is complete a run folder is created which has a folder with the date of creation. The config.tcl file inside the run folder makes sure that it shows the default parameters.
 
 ![1](https://github.com/user-attachments/assets/3471ce15-b948-41d7-89ee-cdafd31c428e)
 
@@ -1655,16 +1655,16 @@ Once the preparation is complete a run folder is created which has a folder with
           <h4 id = 'Synthesis'>Synthesis</h4>
      </summary>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Synthesis is the digital design process where the high-level behavioral description of a circuit (usually written in hardware description languages like Verilog or VHDL) is translated into a gate-level netlist. This gate-level netlist is composed of logic gates and flip-flops, which are the fundamental building blocks of digital circuits. These blocks are from the Standard cell libraries.<br>
-Once the preparation is complete the command used to synthese is given below,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Synthesis is the digital design process where the high-level behavioral description of a circuit (usually written in hardware description languages like Verilog or VHDL) is translated into a gate-level netlist. This gate-level netlist is composed of logic gates and flip-flops, which are the fundamental building blocks of digital circuits. These blocks are from the Standard cell libraries.<br>
+Once the preparation is complete the command used to synthesize is given below,
 ```
 run_synthesis
 ```
-The above command is to run both yosys synthesis and ABC. Once the synthesis is complete reports and results wilkl be generated in the respective folder.<br>
+The above command is to run both yosys synthesis and ABC. Once the synthesis is complete reports and results will be generated in the respective folder.<br>
 
 ![2](https://github.com/user-attachments/assets/f5b7acb3-9d86-4916-98da-5181fca658e5)
 
-Flop Ratio is calculate by,
+The Flop Ratio is calculated by,
 ```math
 Flop\ Ratio = \frac{Number\ of\ D\ Flip\ Flops}{Total\ Number\ of\ Cells}
 ```
@@ -1673,6 +1673,7 @@ Percentage\ of\ DFF's = Flop\ Ratio * 100
 ```
 <br>
 From the synthesized report we get the number of D flipflops and total number of cells as,<br>
+
 ![4](https://github.com/user-attachments/assets/c1a7f03b-c566-46be-8574-1e38cfcc130a)
 <br><br>
 From the synthesized report we can calculate the flop ratio as,
@@ -1688,7 +1689,61 @@ Percentage\ of\ DFF's = 0.2266741384 * 100 = 22.66741384\ \%
           <h4 id = 'Floor and power planning'>Floor and power planning</h4>
      </summary>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In floor planning 
+In floor planning, there are various steps involved in floor planning,
+<h3>Width and height of core and die</h3>
+<br>
+Defining the dimensions of the chip is mostly dependent on the dimensions of the logic gates used that is the standard cells. Dimensions of the wire used to connect the cells also play a major role in defining the dimensions of the chip.<br><br>
+
+**```CORE```** - A core is the section of the chip where the fundamental logic of the design is placed. <br><br>
+**```DIE```** - Core is inside the die. Die encapsulates the core, which is the small semiconductor material specimen on which the fundamental circuit is fabricated.<br><br>
+When the circuit which includes the standard cells and flipflops together completely occupies the complete core then it means that it has 100% utilization of the core.<br>
+Utilization of the core is given by,
+
+```math
+Utilization\ Factor = \frac{Area\ occupied\ by\ Netlist}{Total\ Area\ of\ Core}
+```
+```math
+Percentage\ of\ Utilization\ Factor = Utilization\ Factor * 100
+```
+
+When the utilization factor is 1 the the core is completely occupied by the cells no external cells can be added to the core. Ideally, the utilization factor percentage is taken to be 50%  or 60%.<br>
+The aspect ratio is the ratio between the height of the chip to the width of the chip.
+
+```math
+Aspect\ Ratio = \frac{Height}{Width}
+```
+```math
+Percentage\ of\ Aspect\ Ratio = Aspect\ Ratio * 100
+```
+
+For a square chip, the Aspect ratio is equal to 1.<br>
+Extra area in the core is kept ideally for optimization to place some buffers.
+<br><br>
+<h4>Pre Placed cells</h4>
+<br>
+A single netlist can be divided into multiple subblocks that can be used together and separately according to the needs. Preplaced cells can be used multiple times. The functionality of the replaced cells is implemented once and instantiated multiple times in the netlist. The placement of these preplaced cells or IPs is called Floor Planning. Preplaced cells are placed even before placement and routing. These pre-placed cells are not moved during the placement and routing and remain in the fixed place.
+<br><br>
+<h4>De-Coupling Capacitors</h4>
+<br>
+The preplaced cells have to be surrounded by de-coupling capacitors. Whenever a logic state is switching from logic 0 to logic 1, the supply voltage has to send some charge, which charge the capacitor from 0 to 1. This current requirement is met by the supply voltage. Similarly while shifting from logic 1 to logic 0, Vss takes the charge and discharges the capacitor. But practically, when a power supply flows through a piece of wire there is a drop due to the resistance and inductance associated with the wire.<br>
+When the output at the end of the wire goes below the noise margin then logic 1 is not detected as 1.
+Decoupling capacitors are huge capacitors filled with charge which are connected parallel to the circuit. The equivalent voltage across the decoupling capacitor is the input voltage. Once the preplaced cells are surrounded by de-coupling capacitors, local communication is taken care.
+<br><br>
+<h4>Power Planning</h4>
+<br>
+The signal that travels from one pre-placed cell to another pre-placed cell requires some extra power from the power supply to maintain the logic. Decoupling capacitor can't be placed all over the chip as it is not feasible and hence require the power supply. When a 16-bit bus is connected to an inverter, all the capacitors charged to be discharge to 0 through the ground which causes a ground bounce. And only one ground is available to discharge. Ground buses can settle later. But when the size of the ground bounce Ghosts is greater than the noise margin then it enters to an undefined state which is not predictable. Similarly, when all capacitors, try to charge simultaneously It causes a voltage group as it demands from a single main supply. Both the problem of voltage droop and ground bounce is due to the presence of only one single source power supply. <>When there are multiple source power supplies and multiple Vdd, power can be taken from the nearest power supply, or drop current can be dropped to the nearest ground.
+<br><br>
+<h4>Pin placement</h4>
+<br>
+Complete knowledge of the design is required for the pin placement. Clock ports are bigger than the data ports. As the clock ports drives, all the cells are completely on the chip and hence the clock ports requires the least resistance.
+As higher the area, lower will be the resistance and hence clog ports are bigger.
+<br><br>
+<h4>Logical cell placement blockage</h4>
+<br>
+Automated placement and routing tools do not place any cells in a particular area where the io pins are placed (DIE). Therefore, the area is reserved for pen location.
+<br><br>
+
+     
 </details>
 <details>
      <summary>
