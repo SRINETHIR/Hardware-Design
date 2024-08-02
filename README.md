@@ -1747,6 +1747,7 @@ run_floorplan
 ![1](https://github.com/user-attachments/assets/c30babf5-f5d6-4c1c-b73b-6ead34eb0ef1)
 <br>
 To view the layout after the floorplan, run the below command in the floorplan results directory:
+
 ```
 magic -T <path to .tech file> lef read <path to .lef file> def read <name of .def file> &
 ```
@@ -1780,6 +1781,35 @@ All the unplaced standard cells are placed in the left corner:
      <summary>
           <h4 id = 'Placement'>Placement</h4>
      </summary>
+
+Run the below command to complete the placement of the design,
+```
+run_placement
+```
+<br>
+
+![1](https://github.com/user-attachments/assets/bce1c1d0-6c03-43c6-bcac-0e4beaad5d7c)
+<br>
+
+![2](https://github.com/user-attachments/assets/ac5add61-9c21-4efe-9b80-536efb41c933)
+<br>
+
+To view the layout after the floorplan, run the below command in the floorplan results directory:
+
+```
+magic -T <path to .tech file> lef read <path to .lef file> def read <name of .def file> &
+```
+<br>
+
+![3](https://github.com/user-attachments/assets/390cc80a-6e02-4d19-8caa-370a394b5204)
+<br>
+
+Layout after placement:
+<br>
+![1](https://github.com/user-attachments/assets/ded63354-9208-4b00-aba5-2f4a44d35ebc)
+
+
+
 </details>
 <details>
      <summary>
