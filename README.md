@@ -1591,14 +1591,14 @@ SDC exported
 
 A chip design contains various components inside the chip. A few of those components are listed below:
 
-1.  **```PADS```** - Pads are used to send the signals inside the chip. Signals move from inside to outside or outside to inside through these pads.<br>
-2.  **```CORE```** - All the digital logic of the chip is present inside the core of the chip (like OR gate, AND gate, etc.)<br>
-3.  **```DIE```** - Die is the sides of the entire chip that surrounds the core of the chip.<br>
-4.  **```FOUNDARY IPs```** - The blocks which are present in the core of the chip like ADC, DAC, SRAM, etc are the boundary IPs. The performance of the electronic devices depends on the boundary IPs.<br>
+1.  **```PADS```** - Pads are used to send the signals inside the chip. Signals move from inside to outside or outside to inside through these pads.<br><br>
+2.  **```CORE```** - All the digital logic of the chip is present inside the core of the chip (like OR gate, AND gate, etc.)<br><br>
+3.  **```DIE```** - Die is the sides of the entire chip that surrounds the core of the chip.<br><br>
+4.  **```FOUNDARY IPs```** - The blocks which are present in the core of the chip like ADC, DAC, SRAM, etc are the boundary IPs. The performance of the electronic devices depends on the boundary IPs.<br><br>
 5.  **```MACROS```** - Macros are mostly purely digital logic. But when compared to macros, foundry IPs require some amount of intelligence to continue.<br>
 
-RISC V instruction set architecture (ISA)
-Software applications are composed of small functions that are compiled and executed. These functions are translated into hardware-specific instructions by a compiler, which is then converted into binary machine language using an assembler. The compiler's instructions serve as an intermediate layer between the C language and binary language. To implement these instructions and produce binary output, an RTL (Register Transfer Level) description language is used. The netlist, synthesized from the RTL, is then converted into hardware through physical design implementation.
+<h3>RISC V instruction set architecture (ISA)</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Software applications are composed of small functions that are compiled and executed. These functions are translated into hardware-specific instructions by a compiler, which is then converted into binary machine language using an assembler. The compiler's instructions serve as an intermediate layer between the C language and binary language. To implement these instructions and produce binary output, an RTL (Register Transfer Level) description language is used. The netlist, synthesized from the RTL, is then converted into hardware through physical design implementation.
 
 <h2>ASIC flow - Application-specific integrated circuits flow</h2>
 Major elements that are required to design ASIC are:
@@ -1608,27 +1608,87 @@ Major elements that are required to design ASIC are:
      <li>PDKs-Process design kits</li>
 </ul>
 The OpenLane Architecture and the OpenLane flow stages are depicted below:
-<br>
+<br><br>
 
 ![1](https://github.com/user-attachments/assets/3c5da553-29dd-4e27-86b6-58952d9fd3ee) 
 
-
+<br><br>
 The simplified flow from RTL to GDSII is as given below:
-<br>
-![2](https://github.com/user-attachments/assets/45c22368-97be-4c00-af2c-6b9553635232)
 <br><br>
 
-The different stages of OpenLane flow are explained in detail below:
+![2](https://github.com/user-attachments/assets/45c22368-97be-4c00-af2c-6b9553635232)
+<br><br>
+<details>
+     <summary>
+          <h4 id = 'Design preparation Setup'>Design preparation Setup</h4>
+     </summary>
+
+The below set of code is used for the basic design preparartion setup of OpenLane
+
+```
+docker
+./flow.tcl -interactive
+package require openlane 0.9
+```
+**```Docker```** - This command which is used to provide a suitable environment for the OpenLane flow to run.<br><br>
+**```./flow.tcl -interactive```** - This command runs the flow.tcl script in interactive mode. The -interactive flag likely indicates that the script will require user input or will run in a mode where the user can interact with it in real-time.<br><br>
+**```package require openlane 0.9```** - This command inputs and loads all the OpenLnae packages of version 0.9 which are required.<br><br><br>
+
+![3](https://github.com/user-attachments/assets/3fb6a977-c397-4085-9611-d509fe26d73e)
+
+ The design that we need to run the OpenLane flow is kept in designs folder inside the oprnlane folder. Each design is present as a folder which has the src folder, config file and skywater130 nm pdk(process design kit). Inside the src folder it contains the verilog design file and the sdc constraints used for timing analysis.<br>
+
+ ```
+prep -design <Design folder name>
+ ```
+The above command is used in setting up necessary files and configurations for the design process. Creates a specific location from where the flow fetches the file and also it merges the lef files and the tlef files.<br>
+Once the preparation is complete a run folder is created which has a folder with the date of creation. The config.tcl file inside the run folder make sure that it shows the default parameters.
+
+![1](https://github.com/user-attachments/assets/3471ce15-b948-41d7-89ee-cdafd31c428e)
+
+</details>
+
+<h3>The different stages of OpenLane flow are explained in detail below:</h3>
 
 <details>
      <summary>
           <h4 id = 'Synthesis'>Synthesis</h4>
      </summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Synthesis is the digital design process where the high-level behavioral description of a circuit (usually written in hardware description languages like Verilog or VHDL) is translated into a gate-level netlist. This gate-level netlist is composed of logic gates and flip-flops, which are the fundamental building blocks of digital circuits. These blocks are from the Standard cell libraries.<br>
+Once the preparation is complete the command used to synthese is given below,
+```
+run_synthesis
+```
+The above command is to run both yosys synthesis and ABC. Once the synthesis is complete reports and results wilkl be generated in the respective folder.<br>
+
+![2](https://github.com/user-attachments/assets/f5b7acb3-9d86-4916-98da-5181fca658e5)
+
+Flop Ratio is calculate by,
+```math
+Flop\ Ratio = \frac{Number\ of\ D\ Flip\ Flops}{Total\ Number\ of\ Cells}
+```
+```math
+Percentage\ of\ DFF's = Flop\ Ratio * 100
+```
+<br>
+From the synthesized report we get the number of D flipflops and total number of cells as,<br>
+![4](https://github.com/user-attachments/assets/c1a7f03b-c566-46be-8574-1e38cfcc130a)
+<br><br>
+From the synthesized report we can calculate the flop ratio as,
+```math
+Flop\ Ratio = \frac{1618}{7138} = 0.2266741384
+```
+```math
+Percentage\ of\ DFF's = 0.2266741384 * 100 = 22.66741384\ \%
+```
 </details>
 <details>
      <summary>
           <h4 id = 'Floor and power planning'>Floor and power planning</h4>
      </summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In floor planning 
 </details>
 <details>
      <summary>
