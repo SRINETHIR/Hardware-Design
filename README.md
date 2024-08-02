@@ -1743,28 +1743,36 @@ Run the below command to get the floor plan of the design,
 ```
 run_floorplan
 ```
+<br>
 ![1](https://github.com/user-attachments/assets/c30babf5-f5d6-4c1c-b73b-6ead34eb0ef1)
 <br>
 To view the layout after the floorplan, run the below command in the floorplan results directory:
 ```
 magic -T <path to .tech file> lef read <path to .lef file> def read <name of .def file> &
 ```
+<br>
+     
 ![2](https://github.com/user-attachments/assets/28533f8c-b224-4426-90c8-b16f18f8f859)
 <br>
 
 Screenshot of the floorplan viewed with magic:
+<br>
 ![1](https://github.com/user-attachments/assets/3765a953-31c8-41c4-b443-7269b2cb8026)
 <br>
 We could observe that the ports are placed equidistant as mentioned:
+<br>
 ![1](https://github.com/user-attachments/assets/6c2986cf-a554-4c6f-b727-222ba41c37a3)
 <br>
 Metal layers are configured correctly:
+<br>
 ![1](https://github.com/user-attachments/assets/07a4be58-7529-4047-948c-8f3cf9a31a5f)
 <br>
 De-Coupling capacitor:
+<br>
 ![1](https://github.com/user-attachments/assets/bfb25dbd-3a23-48ed-bd95-6d9665a869e2)
 <br>
-All the unplaced standard cells are placed in left corner:
+All the unplaced standard cells are placed in the left corner:
+<br>
 ![2](https://github.com/user-attachments/assets/84c27a20-c77d-44c8-887a-a35671dbb50f)
 <br>
 </details>
