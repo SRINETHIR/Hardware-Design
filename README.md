@@ -1718,32 +1718,55 @@ Percentage\ of\ Aspect\ Ratio = Aspect\ Ratio * 100
 
 For a square chip, the Aspect ratio is equal to 1.<br>
 Extra area in the core is kept ideally for optimization to place some buffers.
-<br><br>
-<h4>Pre Placed cells</h4>
+<br>
+<h3>Pre Placed cells</h3>
 <br>
 A single netlist can be divided into multiple subblocks that can be used together and separately according to the needs. Preplaced cells can be used multiple times. The functionality of the replaced cells is implemented once and instantiated multiple times in the netlist. The placement of these preplaced cells or IPs is called Floor Planning. Preplaced cells are placed even before placement and routing. These pre-placed cells are not moved during the placement and routing and remain in the fixed place.
 <br><br>
-<h4>De-Coupling Capacitors</h4>
-<br>
+<h3>De-Coupling Capacitors</h3>
 The preplaced cells have to be surrounded by de-coupling capacitors. Whenever a logic state is switching from logic 0 to logic 1, the supply voltage has to send some charge, which charge the capacitor from 0 to 1. This current requirement is met by the supply voltage. Similarly while shifting from logic 1 to logic 0, Vss takes the charge and discharges the capacitor. But practically, when a power supply flows through a piece of wire there is a drop due to the resistance and inductance associated with the wire.<br>
 When the output at the end of the wire goes below the noise margin then logic 1 is not detected as 1.
 Decoupling capacitors are huge capacitors filled with charge which are connected parallel to the circuit. The equivalent voltage across the decoupling capacitor is the input voltage. Once the preplaced cells are surrounded by de-coupling capacitors, local communication is taken care.
 <br><br>
-<h4>Power Planning</h4>
-<br>
+<h3>Power Planning</h3>
 The signal that travels from one pre-placed cell to another pre-placed cell requires some extra power from the power supply to maintain the logic. Decoupling capacitor can't be placed all over the chip as it is not feasible and hence require the power supply. When a 16-bit bus is connected to an inverter, all the capacitors charged to be discharge to 0 through the ground which causes a ground bounce. And only one ground is available to discharge. Ground buses can settle later. But when the size of the ground bounce Ghosts is greater than the noise margin then it enters to an undefined state which is not predictable. Similarly, when all capacitors, try to charge simultaneously It causes a voltage group as it demands from a single main supply. Both the problem of voltage droop and ground bounce is due to the presence of only one single source power supply. <>When there are multiple source power supplies and multiple Vdd, power can be taken from the nearest power supply, or drop current can be dropped to the nearest ground.
 <br><br>
-<h4>Pin placement</h4>
-<br>
+<h3>Pin placement</h3>
 Complete knowledge of the design is required for the pin placement. Clock ports are bigger than the data ports. As the clock ports drives, all the cells are completely on the chip and hence the clock ports requires the least resistance.
 As higher the area, lower will be the resistance and hence clog ports are bigger.
 <br><br>
-<h4>Logical cell placement blockage</h4>
-<br>
+<h3>Logical cell placement blockage</h3>
 Automated placement and routing tools do not place any cells in a particular area where the io pins are placed (DIE). Therefore, the area is reserved for pen location.
 <br><br>
 
-     
+Run the below command to get the floor plan of the design,
+```
+run_floorplan
+```
+![1](https://github.com/user-attachments/assets/c30babf5-f5d6-4c1c-b73b-6ead34eb0ef1)
+<br>
+To view the layout after the floorplan, run the below command in the floorplan results directory:
+```
+magic -T <path to .tech file> lef read <path to .lef file> def read <name of .def file> &
+```
+![2](https://github.com/user-attachments/assets/28533f8c-b224-4426-90c8-b16f18f8f859)
+<br>
+
+Screenshot of the floorplan viewed with magic:
+![1](https://github.com/user-attachments/assets/3765a953-31c8-41c4-b443-7269b2cb8026)
+<br>
+We could observe that the ports are placed equidistant as mentioned:
+![1](https://github.com/user-attachments/assets/6c2986cf-a554-4c6f-b727-222ba41c37a3)
+<br>
+Metal layers are configured correctly:
+![1](https://github.com/user-attachments/assets/07a4be58-7529-4047-948c-8f3cf9a31a5f)
+<br>
+De-Coupling capacitor:
+![1](https://github.com/user-attachments/assets/bfb25dbd-3a23-48ed-bd95-6d9665a869e2)
+<br>
+All the unplaced standard cells are placed in left corner:
+![2](https://github.com/user-attachments/assets/84c27a20-c77d-44c8-887a-a35671dbb50f)
+<br>
 </details>
 <details>
      <summary>
