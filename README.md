@@ -1974,14 +1974,53 @@ Fall\ transition\ time = Time\ taken\ for\ output\ to\ fall\ to\ 20\% - Time\ ta
 Rise\ transition\ time = 8.06645 - 8.04008 = 0.02637\ ns = 26.37\ ps
 ```
 
+Rise Cell Delay:
 
+```math
+Rise\ Cell\ Delay = Time\ taken\ for\ output\ to\ rise\ to\ 50\% - Time\ taken\ for\ input\ to\ fall\ to\ 50\%
+```
+```math
+50\%\ of\ VDD = 1.65
+```
+<br>
+Time taken for the input to fall to 50% of the output:
+<br>
 
+![fall](https://github.com/user-attachments/assets/221cef1f-a0b3-4a16-9c1b-4b006ce5be33)
+<br>
+Time taken for the output to rise to 50% of the output:
+<br>
 
+![rise](https://github.com/user-attachments/assets/ad97e794-d5f2-423a-919f-cdfe22b36871)
 
+```math
+Rise\ Cell\ Delay = 2.18661 - 2.14992 = 0.03669\ ns = 36.69\ ps
+```
+<br>
+Fall Cell Delay:
+<br>
 
+```math
+Fall\ Cell\ Delay = Time\ taken\ for\ output\ to\ fall\ to\ 50\% - Time\ taken\ for\ input\ to\ rise\ to\ 50\%
+```
+```math
+50\%\ of\ 3.3\ V = 1.65\ V
+```
+<br>
+Time taken for the input to rise to 50% of the output:
+<br>
 
+![rise](https://github.com/user-attachments/assets/cacfaa9c-da32-488a-a69f-1975e5ff7d9e)
+<br>
+Time taken for the output to fall to 50% of the output:
+<br>
 
+![fall](https://github.com/user-attachments/assets/02d69dda-2963-4ccf-977e-8073988892cc)
+<br>
 
+```math
+Fall\ Cell\ Delay = 4.05326 - 4.05004 = 0.00322\ ns = 3.22\ ps
+```
 
 </details>
 <details>
