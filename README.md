@@ -1597,7 +1597,7 @@ A chip design contains various components inside the chip. A few of those compon
 4.  **```FOUNDARY IPs```** - The blocks which are present in the core of the chip like ADC, DAC, SRAM, etc are the boundary IPs. The performance of the electronic devices depends on the boundary IPs.<br><br>
 5.  **```MACROS```** - Macros are mostly purely digital logic. But when compared to macros, foundry IPs require some amount of intelligence to continue.<br>
 
-<h3>RISC V instruction set architecture (ISA)</h3>
+<h2>RISC V instruction set architecture (ISA)</h2>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Software applications are composed of small functions that are compiled and executed. These functions are translated into hardware-specific instructions by a compiler, which is then converted into binary machine language using an assembler. The compiler's instructions serve as an intermediate layer between the C language and binary language. To implement these instructions and produce binary output, an RTL (Register Transfer Level) description language is used. The netlist, synthesized from the RTL, is then converted into hardware through physical design implementation.
 
 <h2>ASIC flow - Application-specific integrated circuits flow</h2>
@@ -1744,6 +1744,7 @@ Run the below command to get the floor plan of the design,
 run_floorplan
 ```
 <br>
+
 ![1](https://github.com/user-attachments/assets/c30babf5-f5d6-4c1c-b73b-6ead34eb0ef1)
 <br>
 To view the layout after the floorplan, run the below command in the floorplan results directory:
@@ -1808,13 +1809,51 @@ Layout after placement:
 <br>
 ![1](https://github.com/user-attachments/assets/ded63354-9208-4b00-aba5-2f4a44d35ebc)
 
-
-
 </details>
 <details>
      <summary>
-          <h4 id = 'CTS - Clock tree Synthesis'>CTS - Clock tree Synthesis</h4>
+          <h4 id = 'SPICE extraction and post layout spice Simulation'>SPICE extraction and post layout spice Simulation </h4>
      </summary>
+
+Git clone the repository **```(https://github.com/nickson-jose/vsdstdcelldesign.git)```** to get the already built .mag file which is already built for the inverter using the command.
+```
+git clone <HTPPS web URL to clone: https://github.com/nickson-jose/vsdstdcelldesign.git>
+```
+The clone folder has the .mag file **```(skt130A_inv.mag)```** for the invertor,<br>
+![1](https://github.com/user-attachments/assets/6bd121d2-da07-4360-a5a4-fb860d04f594)
+<br>
+Command to open the .mag file to view the layout of the invertor:
+
+```
+magic -T <Name of .tech file: sky130A.tech> <Nmae of .mag file: sky130A_inv.mag> &
+```
+![2](https://github.com/user-attachments/assets/8d6e2b1b-21fb-4bf8-9c95-16e1101d602e)
+<br>
+The layout of the inverter is viewed with magic:
+![1](https://github.com/user-attachments/assets/c5540e35-45d6-4c1e-8ecf-59997c0b37b3)
+<br>
+Checking the NMOS and PMOS of the inverter layout:<br>
+![nmos](https://github.com/user-attachments/assets/2199ff66-5fc1-4993-b2a1-fb77109a64cb)<br>
+![pmos](https://github.com/user-attachments/assets/07b736c9-61bb-4d9f-978d-25c79e7d6e2d)
+<br><br>
+Checking if the drain of PMOS and drain of NMOS is connected and to output:<br>
+To check if any two parts of the inverter layout are connected, press S three times so that all the connected region gets highlighted.<br>
+![1](https://github.com/user-attachments/assets/ff052d66-b194-4b12-82cf-a6db994f40c6)
+<br>
+Source of PMOS connected Vdd<br>
+![1](https://github.com/user-attachments/assets/4a16a12d-4efa-4064-a4b7-f2e5c002ab45)
+<br>
+Source of NMOS connected Vss (Ground).<br>
+![2](https://github.com/user-attachments/assets/700bcbb8-4238-4c44-b0dc-6b836fee9ca4)
+<br>
+
+
+
+
+
+
+
+
 </details>
 <details>
      <summary>
