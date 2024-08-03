@@ -1973,6 +1973,7 @@ Fall\ transition\ time = Time\ taken\ for\ output\ to\ fall\ to\ 20\% - Time\ ta
 ```math
 Rise\ transition\ time = 8.06645 - 8.04008 = 0.02637\ ns = 26.37\ ps
 ```
+Rise Cell delay is the difference between the time taken by the output to reach 50% and the time taken by the input to reach 50% when the output is rising. Whereas, Fall cell delay is the difference between the time taken by the output to reach 50% and the time taken by the input to reach 50% when the output is falling.<br>
 
 Rise Cell Delay:
 
