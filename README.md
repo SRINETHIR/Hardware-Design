@@ -1825,7 +1825,7 @@ The clone folder has the .mag file **```(skt130A_inv.mag)```** for the invertor,
 ![1](https://github.com/user-attachments/assets/6bd121d2-da07-4360-a5a4-fb860d04f594)
 
 <br>
-Command to open the .mag file to view the layout of the invertor:
+Command to open the .mag file to view the layout of the inverter:
 
 ```
 magic -T <Name of .tech file: sky130A.tech> <Nmae of .mag file: sky130A_inv.mag> &
@@ -1836,7 +1836,7 @@ magic -T <Name of .tech file: sky130A.tech> <Nmae of .mag file: sky130A_inv.mag>
 <br>
 The layout of the inverter is viewed with magic:
 
-![1](https://github.com/user-attachments/assets/c5540e35-45d6-4c1e-8ecf-59997c0b37b3)
+![1](https://github.com/user-attachments/assets/da1d92ab-f1c6-4de3-b3fc-ac26b2716822)
 
 <br>
 Checking the NMOS and PMOS of the inverter layout:<br>
