@@ -2029,16 +2029,7 @@ Fall\ Cell\ Delay = 4.05326 - 4.05004 = 0.00322\ ns = 3.22\ ps
           <h4 id = 'Placement'>Placement</h4>
      </summary>
 </details>
-<details>
-     <summary>
-          <h4 id = 'Routing'>Routing</h4>
-     </summary>
-</details>
-<details>
-     <summary>
-          <h4 id = 'Sign off'>Sign Off</h4>
-     </summary>
-</details>
+
 
 
 </details>
