@@ -1863,6 +1863,119 @@ Source of NMOS connected Vss (Ground).
 ![2](https://github.com/user-attachments/assets/700bcbb8-4238-4c44-b0dc-6b836fee9ca4)
 <br>
 
+<h4>SPICE extraction:</h4><br>
+Command to extract the ext file from magic:
+
+```
+extract all
+ext2spice cthresh 0 rthresh 0
+ext2spice
+```
+<br>
+
+![2](https://github.com/user-attachments/assets/0b011cbf-2874-47a3-8e96-c55bd5f42360)
+<br>
+
+Creating the Spice file with the ext file:
+<br> 
+
+![1](https://github.com/user-attachments/assets/99338de5-a30f-464a-a2c8-db4d197f01da)
+<br> 
+
+![2](https://github.com/user-attachments/assets/5d19b549-baf3-47fc-9fc6-efd242c3d2c8)
+<br>
+
+Once these commands are done we can observe the spice file being created in the location,
+<br>
+
+![1](https://github.com/user-attachments/assets/db157108-4b42-4e76-9e97-e57be1065c88)
+<br>
+
+The created spice file:
+<br>
+
+![2_spicefile](https://github.com/user-attachments/assets/7a4e7183-9783-4ca8-946b-8c410ee513fc)
+
+<br>
+
+Dimension of the grid in the layout:<br>
+![1_dimension](https://github.com/user-attachments/assets/ac9beb37-41f9-41b7-89a6-a7cc451588e0)
+<br>
+Edit the spice file according to the layout.<br>
+
+![2](https://github.com/user-attachments/assets/415e1ee1-c1aa-45ef-9192-520bf6eb8f17)
+ 
+<br>
+<h4>SPICE simulation:</h4><br>
+
+To get the waveform and simulate it with ngspice run the following commands:
+```
+ngspice <Nae of the spice file: sky130_inv.spice>
+plot y vs time a
+```
+![1](https://github.com/user-attachments/assets/a1497ffc-3a99-4b15-8635-8861b15a8fbd)
+
+<br>
+Fall transition delay is the time taken to fall from 80% of the maximum value(Vdd) to 20% to the maximum value(Vdd). Similarly, rise transition delay is the time taken to rise from 20% to the maximum value(Vdd) to 80% of the maximum value(Vdd).
+
+Rise transition delay:
+<br>
+```math
+Rise\ transition\ time = Time\ taken\ for\ output\ to\ rise\ to\ 80\% - Time\ taken\ for\ output\ to\ rise\ to\ 20\%
+```
+```math
+20\%\ of\ VDD = 0.66
+```
+```math
+80\%\ of\ VDD = 2.64
+```
+<br>
+20% Of the VDD = 0.66:
+<br>
+
+![20](https://github.com/user-attachments/assets/105be3a4-a3ef-45ee-917f-f3566e5de8f1)
+<br>
+80% Of the VDD:
+<br>
+
+![80](https://github.com/user-attachments/assets/0ea6e46d-e134-4676-8ee1-e1690f278139)
+<br>
+
+```math
+Rise\ transition\ time = 2.20467 - 2.16824 = 0.036943\ ns = 36.943\ ps
+```
+
+<br>
+Fall transition delay:
+<br>
+
+```math
+Fall\ transition\ time = Time\ taken\ for\ output\ to\ fall\ to\ 20\% - Time\ taken\ for\ output\ to\ fall\ to\ 80\%
+```
+```math
+20\%\ of\ VDD = 0.66
+```
+```math
+80\%\ of\ VDD = 2.64
+```
+<br>
+20% Of the VDD = 0.66:
+<br>
+
+![20](https://github.com/user-attachments/assets/faa96529-5269-47b6-86d5-ddeddb5dca1b)
+<br>
+80% Of the VDD:
+<br>
+
+![80](https://github.com/user-attachments/assets/663cb8f6-848a-4d91-b4f2-4130ee774398)
+<br>
+
+```math
+Rise\ transition\ time = 8.06645 - 8.04008 = 0.02637\ ns = 26.37\ ps
+```
+
+
+
 
 
 
