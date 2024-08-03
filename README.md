@@ -1819,31 +1819,47 @@ Git clone the repository **```(https://github.com/nickson-jose/vsdstdcelldesign.
 ```
 git clone <HTPPS web URL to clone: https://github.com/nickson-jose/vsdstdcelldesign.git>
 ```
-The clone folder has the .mag file **```(skt130A_inv.mag)```** for the invertor,<br>
+The clone folder has the .mag file **```(skt130A_inv.mag)```** for the invertor,
+<br>
+
 ![1](https://github.com/user-attachments/assets/6bd121d2-da07-4360-a5a4-fb860d04f594)
+
 <br>
 Command to open the .mag file to view the layout of the invertor:
 
 ```
 magic -T <Name of .tech file: sky130A.tech> <Nmae of .mag file: sky130A_inv.mag> &
 ```
+
 ![2](https://github.com/user-attachments/assets/8d6e2b1b-21fb-4bf8-9c95-16e1101d602e)
+
 <br>
 The layout of the inverter is viewed with magic:
+
 ![1](https://github.com/user-attachments/assets/c5540e35-45d6-4c1e-8ecf-59997c0b37b3)
+
 <br>
 Checking the NMOS and PMOS of the inverter layout:<br>
-![nmos](https://github.com/user-attachments/assets/2199ff66-5fc1-4993-b2a1-fb77109a64cb)<br>
+
+![nmos](https://github.com/user-attachments/assets/2199ff66-5fc1-4993-b2a1-fb77109a64cb)
+<br>
 ![pmos](https://github.com/user-attachments/assets/07b736c9-61bb-4d9f-978d-25c79e7d6e2d)
 <br><br>
 Checking if the drain of PMOS and drain of NMOS is connected and to output:<br>
-To check if any two parts of the inverter layout are connected, press S three times so that all the connected region gets highlighted.<br>
+To check if any two parts of the inverter layout are connected, press S three times so that all the connected region gets highlighted.
+<br>
 ![1](https://github.com/user-attachments/assets/ff052d66-b194-4b12-82cf-a6db994f40c6)
+
 <br>
-Source of PMOS connected Vdd<br>
+Source of PMOS connected Vdd
+<br>
+
 ![1](https://github.com/user-attachments/assets/4a16a12d-4efa-4064-a4b7-f2e5c002ab45)
+
 <br>
-Source of NMOS connected Vss (Ground).<br>
+Source of NMOS connected Vss (Ground).
+<br>
+
 ![2](https://github.com/user-attachments/assets/700bcbb8-4238-4c44-b0dc-6b836fee9ca4)
 <br>
 
