@@ -2024,6 +2024,12 @@ Fall\ Cell\ Delay = 4.05326 - 4.05004 = 0.00322\ ns = 3.22\ ps
 ```
 
 <br>
+</details>
+<details>
+     <summary>
+          <h4 id = 'Condtions for custom designed cell layout'>Condtions for custom designed cell layout</h4>
+     </summary>
+
 lef file has information regarding input ports, output ports, power, and grid information. No information regarding the logic is present in the lef file. The lef file is enough for placement and routing. Lef file can be extracted from the .mag file. <br>
 
 Guidelines that have to be followed in making a standard cell set are:
@@ -2085,10 +2091,56 @@ Similarly, the height of the standard cell should be an even multiple of y pitch
 Height\ of\ standard\ cell = 0.34 * 8 = 2.72\ um
 ```
 </details>
+
 <details>
      <summary>
-          <h4 id = 'Placement'>Placement</h4>
+          <h4 id = 'Extracting lef file'>Extracting lef file</h4>
      </summary>
+
+Run the command in the magic tkcon window to save the layout with the preferred name
+<br>
+```
+save <Name of the .mag file: sky130_vsdinv.mag>
+```
+<br>
+
+![1_save](https://github.com/user-attachments/assets/83e50ef3-613e-4541-9132-12be8671750a)
+<br>
+
+Command to create and extract the lef file<br>
+```
+lef write <Name of the left file: sky130_vsdinv.lef> 
+```
+<br>
+
+![1](https://github.com/user-attachments/assets/26da5f48-ec38-4c5e-b59c-4a24e4f8ebe7)
+<br>
+
+Screenshot of generated lef file:
+<br>
+
+![1](https://github.com/user-attachments/assets/9bdb24c5-7194-45f8-9bab-f293e0cd96f9)
+<br>
+
+Copy and move the generated lef files and the Sky Water Lib file for different processes to the src folder of your design.
+<br>
+![2](https://github.com/user-attachments/assets/4852131d-8daf-4a1a-b48f-b48be5ae5b89)
+<br>
+
+Edit the config.tcl file to add the lef file to the OpenLnae flow.<br>
+Include these commands in the config.tcl file of the design.<br>
+```
+set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/riscv/src/sky130_fd_sc_hd__typical.lib"
+set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/riscv/src/sky130_fd_sc_hd__fast.lib"
+set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/riscv/src/sky130_fd_sc_hd__slow.lib"
+set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/riscv/src/sky130_fd_sc_hd__typical.lib"
+
+set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+```
+![1](https://github.com/user-attachments/assets/ae33a081-df95-4c0a-9e45-3a0b077920e2)
+<br>
+
+
 </details>
 
 
