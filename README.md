@@ -2139,11 +2139,36 @@ set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/sr
 ```
 ![1](https://github.com/user-attachments/assets/ae33a081-df95-4c0a-9e45-3a0b077920e2)
 <br>
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Including the lef file with the custom riscv design'>Including the lef file with the custom riscv design</h4>
+     </summary>
+
+To continue with old already existing OpenLane run files use the following command:
+```
+docker
+./flow.tcl -interactive
+prep -design <design name: riscv> -tag <Name of the run folder: 02-08_14-37> -overwrite
+```
+![1](https://github.com/user-attachments/assets/7bd9135f-7dd2-49c5-b189-2978675b7700)
+<br>
+Run the following commands to include the lef file into the OpenLane flow:
+```
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+```
+![1](https://github.com/user-attachments/assets/d16eae5a-5639-49a5-8dec-c540c3fc164c)
+<br>
+
+Now run the synthesis part<br>
+We could see 562 instances of our invertor cell in the riscv design<br>
+![1](https://github.com/user-attachments/assets/e44b2458-2266-4060-9dc7-b9d6d69914ce)
+
+
 
 
 </details>
-
-
-
 </details>
 
