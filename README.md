@@ -2023,6 +2023,67 @@ Time taken for the output to fall to 50% of the output:
 Fall\ Cell\ Delay = 4.05326 - 4.05004 = 0.00322\ ns = 3.22\ ps
 ```
 
+<br>
+lef file has information regarding input ports, output ports, power, and grid information. No information regarding the logic is present in the lef file. The lef file is enough for placement and routing. Lef file can be extracted from the .mag file. <br>
+
+Guidelines that have to be followed in making a standard cell set are:
+1) The input and output ports must be at the intersection of vertical and horizontal tracks.
+2) The standard cell's width must be an even multiple of the track pitch.
+3) The cell's height should be an odd multiple of vertical pitch.
+<br><br>
+tracks.info of sky130_fd_sc_hd
+<br>
+
+![2](https://github.com/user-attachments/assets/9ab56fb8-7df2-43c6-8eaf-43b61e808515)
+
+<br>
+Command to convert grig info to track info:
+```
+grid Xspacing Yspacing Xorgin Yorgin
+```
+<br>
+
+![1](https://github.com/user-attachments/assets/c0460dee-edeb-42fd-a996-58d1a8aeea33)
+<br>
+
+We could see that the input and output ports is at the intersection of the vertical and horizontal tracks. This make sure that the route can reach the port from both y and x direction. 
+![1](https://github.com/user-attachments/assets/e1cb53ad-f6a4-436e-9f55-813e31544dc0)
+
+<br>
+<br>
+X pitch from the track info is 0.46 um
+<br>
+
+![1](https://github.com/user-attachments/assets/311669b5-1b1c-4817-9d49-feaeb4af7b92)
+
+
+The width of the standard cell should be an odd multiple of x pitch.<br>
+ hence,<br>
+
+![1](https://github.com/user-attachments/assets/3b3dff59-2bed-4269-8013-91dcd14df8b0)
+<br>
+
+ ```math
+ 0.5 + 1 + 1 + 0.5 = 3
+```
+ ```math
+Width\ of\ standard\ cell = 0.46 * 3 = 1.38\ um
+```
+ 
+<br>
+Similarly, the height of the standard cell should be an even multiple of y pitch
+<br>
+
+![1](https://github.com/user-attachments/assets/f97f0670-267c-4d5a-9ac9-ff580514cc3b)
+
+<br>
+
+```math
+ 0.5 + 1 +1 + 1 + 1 + 1 + 1 + 1 + 0.5 = 8
+```
+ ```math
+Height\ of\ standard\ cell = 0.34 * 8 = 2.72\ um
+```
 </details>
 <details>
      <summary>
