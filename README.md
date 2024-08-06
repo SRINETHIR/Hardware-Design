@@ -2196,28 +2196,197 @@ run_placement
 ![3_placement](https://github.com/user-attachments/assets/7e344595-7080-4288-a0ae-c3853f0e06f4)
 
 <br>
-Move to the placement folder in the result to view the layout after placement. Run the command to view the layout with magic:<br>
+Move to the placement folder in the result to view the layout after placement. Run the command to view the layout with magic:
+<br>
 
 ```
 cd Desktop/work/tools/openlane_working_dir/openlane/designs/riscv/runs/04-08_08-02/results/placement/
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read riscv.placement.def &
 ```
-
+<br>
 ![2](https://github.com/user-attachments/assets/2364ba07-26b9-436f-a26a-e613bbf5a18a)
 <br>
 
 Layout once placement is done:
+<br>
+
 ![2](https://github.com/user-attachments/assets/45c06223-508b-4a4e-964a-470fb52122e5)
 <br>
-
 Instances of vsdiat plugged in the layout 
 <br>
-![2](https://github.com/user-attachments/assets/540376b7-4061-411f-a77c-ef01171cee19)
 
+![2](https://github.com/user-attachments/assets/540376b7-4061-411f-a77c-ef01171cee19)
 <br>
-The overlap in the cell layout is the abutment that ensures that power and ground are shared between the cells.
+The overlap in the cell layout is the abutment that ensures that power and ground are shared between the cells.<br>
+To expand and view the internal layers of the layout run the below command in the tkcon window of magic by selecting the section.<br>
+
+```
+expand
+```
+<br>
+
+![2](https://github.com/user-attachments/assets/94ccbd6f-79f6-471e-9aa3-c692bbc8fe00)
+
 </details>
 
+<details>
+     <summary>
+          <h4 id = 'Static timing Analysis'>Static timing Analysis</h4>
+     </summary>
+
+In OpenLANE Static timing Analysis is performed with OpenSTA.<br>
+Post Synthesis we can observe the TNS and WNS.
+<br>
+
+![1_tns_wns_0](https://github.com/user-attachments/assets/c0780db9-f114-4df2-bd76-06679989ed5a)
+<br>
+
+if there is total negative slack and worst negative slack try reducing it by upscaling the cells by replacing the cell with a bigger cell.<br>
+
+Create a config file to run OpenSTA for the design.
+<br>
+
+![2_pre_staconf](https://github.com/user-attachments/assets/52d7b88f-66d4-4e84-a2da-f1968fa1a881)
+<br>
+
+Once we run OpenSTA with the command below we can observe the tns and wns of the design.<br>
+```
+sta <name of conf file: pre_sta.conf>
+````
+![5_before replacing cell](https://github.com/user-attachments/assets/aab57de0-f71a-4a18-aec2-1a819c0309b7).
+
+<br>
+Looking at the delays we can replace the cell with a bigger cell to reduce the delay and to generate a timing report.<br>
+
+```
+replace_cell instance lib_cell
+report_checks -fields {net cap slew input_pins} -digits 4
+```
+<br>
+We can observe that the slack delay is reduced once the cell is replaced.
+<br>
+
+![6_reduced slack](https://github.com/user-attachments/assets/a715f134-62b8-4871-9c0e-670fe74a8372).
+
+Once the cells are replaced, they will be altered in the netlist. So do not synthesize the design again else the alterations in the netlist will be lost.<br>
+The command used to replace the old netlist is,<br>
+```
+write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/riscv/runs/04-08_08-02/results/synthesis/riscv.synthesis.v
+```
+<br>
+Perform floorplan and placement for the altered netlist.
+
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Clock tree Synthesis'>Clock tree Synthesis</h4>
+     </summary>
+
+To run the clock tree synthesis use the following command in the OpenLane flow command,<br>
+```
+run_cts
+```
+<br>
+Once the cts is complete we can observe that a cts file will be added in the results of the synthesis folder.<br>
+
+![1](https://github.com/user-attachments/assets/b23f4dc7-5612-4cd7-b3ec-744492d82baf)
+
+<br>
+
+For OpenLane timing analysis in OpenROAD, run the following commands to get the timing reports after cts.<br>
+```
+openroad
+read_lef /openLANE_flow/designs/riscv/runs/24-03_10-03/tmp/merged.lef
+read_def /openLANE_flow/designs/riscv/runs/24-03_10-03/results/cts/riscv.cts.def
+write_db riscv_cts.db
+read_db riscv_cts.db
+read_verilog /openLANE_flow/designs/riscv/runs/24-03_10-03/results/synthesis/picorv32a.synthesis_cts.v
+read_liberty -max /openLANE_flow/designs/riscv/src/sky130_fd_sc_hd__slow.lib
+read_liberty -min /openLANE_flow/designs/riscv/src/sky130_fd_sc_hd__fast.lib 
+read_sdc /openLANE_flow/designs/riscv/src/riscv_sdc.sdc
+set_propagated_clock [all_clocks]
+report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
+
+```
+
+![1](https://github.com/user-attachments/assets/57d5790b-5864-4356-9d35-3ba49ff83583)
+
+<br>
+The timing reports are displayed,<br>
+
+![1](https://github.com/user-attachments/assets/a5ed0573-4475-4a02-bf05-960b5e941a49)
+
+![2](https://github.com/user-attachments/assets/22ca960a-9aea-4e1c-83b7-dc1ccc269b81)
+<br>
+<br>
+Clock tree Synthesis for typical corner<br>
+
+```
+openroad
+read_db riscv_cts.db
+read_verilog /openLANE_flow/designs/riscv/runs/04-08_08-02/results/synthesis/riscv.synthesis_cts.v            
+read_liberty /openLANE_flow/designs/riscv/src/sky130_fd_sc_hd__typical.lib
+link_design riscv
+read_sdc /openLANE_flow/designs/riscv/src/riscv_sdc.sdc
+set_propagated_clock [all_clocks]
+report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
+```
+<br>
+
+![1](https://github.com/user-attachments/assets/56c891fd-6097-4ada-8d8c-d5a32dc78d8f)
+<br>
+Timing reports with typical corners,
+<br>
+![2](https://github.com/user-attachments/assets/56998bb3-7e4a-48b9-8ece-99a68adb55ce)
+![3](https://github.com/user-attachments/assets/4d3b41db-85dc-44ca-b556-be89fa9b2946)
+<br>
+
+</details>
+<details>
+     <summary>
+          <h4 id = 'Routing'>Routing</h4>
+     </summary>
+
+To generate the power distribution network run the below command<br>
+```
+run_pdn
+```
+<br>
+
+![1](https://github.com/user-attachments/assets/16655acb-5287-4b5d-a134-db41f693b894)
+<br>
+
+Command to view the Power distribution network in Magic,<br>
+
+```
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read 32-pdn.def &
+```
+<br>
+
+![1](https://github.com/user-attachments/assets/233c2b22-a85a-41e8-bfcd-27b9db8f3555)
+![2](https://github.com/user-attachments/assets/0d6177a2-6ef7-4711-8481-47bffee114dc)
+![3](https://github.com/user-attachments/assets/0a985a6e-2118-439a-93c0-6bab45565f9a)
+<br>
+
+Run the below command to perform routing,<br>
+```
+run_routing
+```
+
+<br>
+View the def file in magic<br>
+Run the command in the routing folder inside the results.
+
+```
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read riscv.def &
+```
+
+![1](https://github.com/user-attachments/assets/a1ca5c94-0f02-4bf4-9a31-0c94a86997e0)
+![2](https://github.com/user-attachments/assets/b1636a23-8ac6-47b5-8f39-dd37746f9497)
+![3](https://github.com/user-attachments/assets/5e3d2132-bbed-4d89-b5b8-ae1184f9695f)
+
+</details>
 
 </details>
 
