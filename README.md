@@ -2180,35 +2180,44 @@ tap_decap_or
 ```
 ![2_floorplan](https://github.com/user-attachments/assets/4f9bd03b-d45e-4a6f-8e28-6c917b37738a)
 
-Perform the placement once the floor plan is done<br>
+</details>
+
+<details>
+     <summary>
+          <h4 id = 'Placement'>Placement</h4>
+     </summary>
+
+Performing the placement once the floor plan is done<br>
 
 ```
 run_placement
 ```
+
 ![3_placement](https://github.com/user-attachments/assets/7e344595-7080-4288-a0ae-c3853f0e06f4)
 
 <br>
-Move to the placement folder in the result to view the layout after placement. Run the command to view the layout with magic:
+Move to the placement folder in the result to view the layout after placement. Run the command to view the layout with magic:<br>
 
 ```
 cd Desktop/work/tools/openlane_working_dir/openlane/designs/riscv/runs/04-08_08-02/results/placement/
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read riscv.placement.def &
 ```
+
 ![2](https://github.com/user-attachments/assets/2364ba07-26b9-436f-a26a-e613bbf5a18a)
+<br>
 
 Layout once placement is done:
 ![2](https://github.com/user-attachments/assets/45c06223-508b-4a4e-964a-470fb52122e5)
 <br>
 
-Instances of vsdiat plugged in the layout<br>
+Instances of vsdiat plugged in the layout 
+<br>
 ![2](https://github.com/user-attachments/assets/540376b7-4061-411f-a77c-ef01171cee19)
 
 <br>
-The overlap in the cell in the layout is the abutment that ensures that power and ground are shared between the cells.
-
-
-
-
+The overlap in the cell layout is the abutment that ensures that power and ground are shared between the cells.
 </details>
+
+
 </details>
 
