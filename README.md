@@ -2449,7 +2449,22 @@ box
 ```
 ![10](https://github.com/user-attachments/assets/07a9ff6a-d1a3-44ff-a449-abf482119d05)
 <br>
-We could see that the DRC error is because the distance between the two poly layers is not sufficient and below the required value<br>
+We could see that the DRC error is because the distance between the two poly layers is not sufficient and below the required value
+<br>
+Updated DRC in sky130A.tech file
+<br>
+![1](https://github.com/user-attachments/assets/90c002d7-a085-4f16-8a52-db57b6ec98e0)
+![2](https://github.com/user-attachments/assets/364106bb-e52a-420c-aee0-47f96ebce681)
+<br>
+Commands to implement updated sky130A.tech file in magic<br>
+```
+tech load sky130A.tech
+drc check
+drc why
+```
+![1](https://github.com/user-attachments/assets/d4ff9483-6410-4f4f-a909-6ca28c3308d1)
+<br>
+
 
 
 
