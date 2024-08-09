@@ -2376,7 +2376,7 @@ run_routing
 
 <br>
 View the def file in magic<br>
-Run the command in the routing folder inside the results.
+Run the command inside the results in the routing folder.
 
 ```
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read riscv.def &
@@ -2385,6 +2385,83 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![1](https://github.com/user-attachments/assets/a1ca5c94-0f02-4bf4-9a31-0c94a86997e0)
 ![2](https://github.com/user-attachments/assets/b1636a23-8ac6-47b5-8f39-dd37746f9497)
 ![3](https://github.com/user-attachments/assets/5e3d2132-bbed-4d89-b5b8-ae1184f9695f)
+
+</details>
+<details>
+     <summary>
+          <h4 id = 'DRC'>DRC</h4>
+     </summary>
+To find the problems in DRC and to fix them, get and tar the drc_tests.tgz. Move to drc_tests to work further<br>
+
+```
+wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+tar xfz drc_tests.tgz
+cd drc_tests
+gvim .magicrc
+magic -d XR &
+```
+
+![1](https://github.com/user-attachments/assets/05409561-d6d5-42f9-ad46-cf0764c2b418)
+
+<br>
+.magicrc file
+<br>
+
+![2](https://github.com/user-attachments/assets/e08a4770-d4e2-4eb6-86a1-d6a2204ccb8f)
+<br>
+
+Opening the magic tool
+<br>
+![3](https://github.com/user-attachments/assets/902c7e3c-5ddf-4c87-b393-afde6c259478)
+
+<br>
+Opening met3.mag in the magic tool to fix the errors in them
+<br>
+
+![4](https://github.com/user-attachments/assets/b13947b9-f60d-43e1-a17b-1e64a51597bd)
+![5](https://github.com/user-attachments/assets/3edf7ddb-cca3-4435-bdd0-cc07cc108aaf)
+<br>
+To know the error in the selected region type 
+```
+drc why
+```
+
+![6](https://github.com/user-attachments/assets/dbe132f6-4757-49a6-8ac1-081b7759afb3)
+<br>
+
+Creating contact cuts in the metal 3 contacts were created. These contact cuts are not present in the layout.<br>
+
+![7](https://github.com/user-attachments/assets/0f22ef9c-2739-4136-b68c-c7b49364583b)
+<br>
+Loading poly into magic
+<br>
+![8](https://github.com/user-attachments/assets/f31cc900-12aa-4ed6-ab06-d1ce22911366)
+<br>
+To know the error in the selected region run 
+```
+what
+```
+![9](https://github.com/user-attachments/assets/857d2b5a-c44c-4c85-9b93-7bdcb0210d05)
+<br>
+To know the dimensions of the selected area run
+```
+box
+```
+![10](https://github.com/user-attachments/assets/07a9ff6a-d1a3-44ff-a449-abf482119d05)
+<br>
+We could see that the DRC error is because the distance between the two poly layers is not sufficient and below the required value<br>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </details>
 
