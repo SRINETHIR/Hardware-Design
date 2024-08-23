@@ -1,11 +1,17 @@
+
+
+
 # VSD - Hardware-Development Program
 The progress made in the VSD-Hardware Development Program :
 
 
 
+<details>
+     <summary>
+          <h2 id = 'Week 0'>Week 0</h2>
+     </summary>
 
-
-     Installation in UBUNTU
+Installation in UBUNTU
      <h3>System Information</h3>
      <ol>
           <li>OS: Ubuntu 22.04<br></li>
