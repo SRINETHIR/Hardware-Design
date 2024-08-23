@@ -1,9 +1,10 @@
 # VSD - Hardware-Development Program
 The progress made in the VSD-Hardware Development Program :
-<details>
-     <summary>
-          <h2 id = 'Week 0'>Week 0</h2>
-     </summary>
+
+
+
+
+
      Installation in UBUNTU
      <h3>System Information</h3>
      <ol>
@@ -2466,19 +2467,19 @@ drc why
 <br>
 
 
-
-
-
-
-
-
-
-
-
-
-
+</details>
 
 </details>
+
+
+<details>
+     <summary>
+          <h2 id = 'Week 7'>Week 7</h2>
+     </summary>
+     
+![1_pdn](https://github.com/user-attachments/assets/e2db2ad7-f219-4711-8d80-1b02f756a4ed)
+
+![2_fastroute guide](https://github.com/user-attachments/assets/75b7f684-85aa-4804-91d4-e4bb3b6fd7da)
 
 </details>
 
