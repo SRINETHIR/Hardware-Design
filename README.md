@@ -2482,8 +2482,12 @@ drc why
      <summary>
           <h2 id = 'Week 7'>Week 7</h2>
      </summary>
-     
+
+PDN generation<br>
 ![1_pdn](https://github.com/user-attachments/assets/e2db2ad7-f219-4711-8d80-1b02f756a4ed)
+
+<br>
+Fast route guide
 
 ![2_fastroute guide](https://github.com/user-attachments/assets/75b7f684-85aa-4804-91d4-e4bb3b6fd7da)
 
