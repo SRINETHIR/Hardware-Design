@@ -1,5 +1,5 @@
 <h1>Implementing and Testing a RISCV at 130nm with Open-Source EDA Tools.</h1>
-The progress made in the VSD-Hardware Development Program :
+<h3>The progress made in the VSD-Hardware Development Program:</h3>
 
 
 
