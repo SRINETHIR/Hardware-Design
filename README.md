@@ -2505,10 +2505,15 @@ TCL file <br>
 Total negative slack <br>
 ![1](https://github.com/user-attachments/assets/ced3c9a5-1f7b-40b8-aa47-c6038d1d957c)
 
+![2_tns](https://github.com/user-attachments/assets/5837cd1b-5b38-40c6-b521-9e68cb020ff4)
+
+
 <br>
 Worst negative slack <br>
 
 ![2](https://github.com/user-attachments/assets/c365a4d7-e569-4948-bf0e-ca68f2a00d1e)
+
+![1_wns](https://github.com/user-attachments/assets/984b5b06-66d7-4388-b149-5613555b70ea)
 <br>
 Post Routing:<br>
 
