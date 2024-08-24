@@ -2510,5 +2510,9 @@ Worst negative slack <br>
 
 ![2](https://github.com/user-attachments/assets/c365a4d7-e569-4948-bf0e-ca68f2a00d1e)
 <br>
+Post Routing:<br>
+
+![3](https://github.com/user-attachments/assets/2767716e-112e-4fae-a9aa-678c31165dfe)
+
 </details>
 
