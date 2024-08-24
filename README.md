@@ -2501,5 +2501,14 @@ Fast route guide
 TCL file <br>
 ![1+txcl](https://github.com/user-attachments/assets/59ff69c7-a586-4686-8e02-2fc6c89c7510)
 <br>
+
+Total negative slack <br>
+![1](https://github.com/user-attachments/assets/ced3c9a5-1f7b-40b8-aa47-c6038d1d957c)
+
+<br>
+Worst negative slack <br>
+
+![2](https://github.com/user-attachments/assets/c365a4d7-e569-4948-bf0e-ca68f2a00d1e)
+<br>
 </details>
 
